@@ -1,0 +1,618 @@
+{
+  "schema_version": 1,
+  "reports": [
+    {
+      "broker": "TD",
+      "title": "Corporate Credit Strategist",
+      "date": "2026-08-21",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "TD認為，US IG初級市場將在Labor Day後面臨強勁且前置的9月供給，預估全月發行$245 255Bn、前兩週即達$140 150Bn，可能創9月新高，且發行節奏將高度前置。TD因AI與M&A融資需求上升，將2026年US IG發行預估上調至$2.2Tn，並估計淨供給達創紀錄的$1,025Bn。TD認為需求放緩下，市場不易吸收供給而不造成Spread wider，預期US IG Spread將由約80bps走向90 100bps。8月US IG發行已達創紀錄水位，也使9月的供給壓力更受市場關注。資金面雖仍有流入，但月度與週度US IG流入均較前期下降；HY違約率則在7月略降，TD模型對未來一年違約率的預估在HY與槓桿貸款間呈現差異，顯示低品質信用的前景並不一致。TD的主要結論是，供給增加與需求放緩的組合，將成為短期US IG Spread的重要壓力來源。",
+      "url": "reports/td-corporate-credit-strategist-2026-08-21/"
+    },
+    {
+      "broker": "JPM",
+      "title": "High Yield and Leveraged Loan Research",
+      "date": "2026-08-21",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "JPM表示，HY債券在利率波動與交易活動放緩下當週承壓，Spread widened 7bps至312bps，資料中心相關HY Spread widened 46bps至420bps；貸款則憑藉穩健技術面，週報酬優於HY。JPM指出，8月貸款發行與再融資活動明顯低於去年同期，但CLO淨發行改善，專注貸款產品也錄得15週來最大流入。中期風險則集中在到期牆：未來三年到期的槓桿信用占比達歷史高點24%，2028與2029年到期金額顯著攀升，且低評等貸款與Software的再融資壓力更大。JPM指出，2028年起到期金額將快速增加，資本市場是否持續開放將更為關鍵。CLO持倉也轉向較保守，減少BB、CCC及低價Software曝險，增持表現較佳的Single B貸款，反映對困境信用風險的審慎態度。報告也顯示，信用風險在品質、產業與到期年限間呈現高度分化。",
+      "url": "reports/jpm-high-yield-and-leveraged-loan-research-2026-08-21/"
+    },
+    {
+      "broker": "JPM",
+      "title": "European Credit Weekly",
+      "date": "2026-08-21",
+      "assets": [
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "JPM認為，Euro credit大致能忽略近期更高的利率波動，因產品duration較短、基本面仍穩健，且fund flow持續流入。當週EUR IG Spread widened 1bp至90bps，EUR HY Spread tightened 5bps至305bps；JPM認為長端公債殖利率上升對歐洲民間借款人的直接影響有限，較高風險仍在槓桿企業及前端利率。油價偏高尚未對企業獲利構成明顯壓力，歐洲總體數據與企業獲利亦展現韌性；能源價格尚未足以嚴重壓抑企業獲利。技術面方面，IG初級市場供給回升、HY仍淡靜，fund flow雖放緩但維持正值。JPM並持續保留Industrials相對Consumer的交易，反映其在低分化環境下的相對價值偏好，並認為Euro credit的利率避震能力仍是近期重要支撐。其核心判斷是，目前高油價與長端利率走勢尚未改變歐洲信用的基本面韌性。",
+      "url": "reports/jpm-european-credit-weekly-2026-08-21/"
+    },
+    {
+      "broker": "JPM",
+      "title": "Credit Market Outlook & Strategy",
+      "date": "2026-08-21",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "JPM認為，US IG Spread本週在其95bps目標附近保持穩定，雖然股市走弱且長天期美債買回消息提高利率波動。JPM將買回操作視為信用市場的溫和正面因素，但仍懷疑美債漲勢的持久性。短期內，Jackson Hole與Labor Day後的9月供給潮是兩項主要考驗；在此之前，JPM認為高殖利率、強勁而廣泛的企業獲利，以及hyperscaler Spread自近期高點回落，將持續支撐需求。fund flow雖較前期減弱，但較高的total return breakeven仍有助零售需求維持韌性。JPM亦預期未來一至兩週輕供給與月底需求可先降低券商庫存，改善9月供給潮前的技術面。JPM不認為應在事件前主張顯著tighten，但隨著年底接近，tighten的論點正逐漸累積；同時建議留意BBB A利差在供給較重的9月可能decompress，並認為USD IG相對GBP信用具較佳相對價值。",
+      "url": "reports/jpm-credit-market-outlook-and-strategy-2026-08-21/"
+    },
+    {
+      "broker": "BofA",
+      "title": "The European Credit Strategist",
+      "date": "2026-08-21",
+      "assets": [
+        "EUR IG"
+      ],
+      "summary": "BofA認為，美國財政部擴大長天期美債買回操作，反映政策端正試圖改善消費可負擔性與壓低長端殖利率；若此主題延續，較長天期的融資者如Utilities與Telecoms可望受惠，且對Reverse Yankee Spread亦具正面連結。BofA不將目前較陡的公債殖利率曲線視為信用市場的主要威脅，因其可支撐零售 fund flow；真正較令人擔心的是前端利率衝擊對企業融資條件的壓力。BofA認為，較高的起始殖利率與較緩慢的衝擊速度，均可減少利率上升對信用報酬的傷害。BofA亦提醒，全球AA級Spread近期落後BBB級，除AI發行人的疲弱外，大量hyperscaler供給可能排擠其他高品質債券需求，令高品質歐元信用在暑假後面臨脆弱性；歐元市場目前受影響較小，但供給變化值得留意。整體而言，其觀點偏向區分利率曲線位置與高品質供給衝擊。",
+      "url": "reports/bofa-the-european-credit-strategist-2026-08-21/"
+    },
+    {
+      "broker": "Barclays",
+      "title": "US Credit Alpha",
+      "date": "2026-08-21",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "Barclays認為，儘管長天期美債殖利率受美國財政部操作與AI相關發行需求影響而波動，Credit Spread尚未隨之明顯惡化；在企業基本面穩健及all in yield仍具吸引力下，短期應維持區間整理，但緊縮評價使市場容錯空間有限。上半年美國信用產品交易量普遍增加，單一名稱CDS、IG cash、組合交易與CLO皆有成長，顯示市場流動性仍佳。報告並指出，AI與資料中心融資已大量滲透IG、HY、ABS與CMBS，供給增加將使技術面與結構保障更受重視，並預期chip financing將隨AI資料中心資本支出而加速；在資料中心證券化市場，強勁基本面仍可能被大量新供給抵銷，投資人可能要求更寬的Spread或較強的結構保障。台灣壽險資金則持續轉向較高評等，對hyperscaler仍審慎，Big 6 banks在1 10年期的相對價值較佳；避險比率調整大致完成亦支持其對TWD的constructive看法。HY方面，第二順位擔保債與第一順位債的Spread差擴大，反映市場對不同次順位緩衝的定價分化。",
+      "url": "reports/barclays-us-credit-alpha-2026-08-21/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-08-20",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS認為，AI基礎設施與資料中心資本支出正改變USD IG private placement市場：年初至今非金融private placement供給已逾2,700億美元，AI相關占比由2024年的3%升至42%，並推高單筆交易規模。雖然private placement在整個IG次級市場的占比仍約15 20%，但發行結構已從Utilities、Oil & Gas與Autos轉向AI相關產業，且缺乏registration rights、無法納入IG指數的「144A for life」債券增加。GS估計，目前因欠缺registration rights而無法納入指數的USD IG債券約2.4兆美元，占更廣泛市場約20%。GS觀察到整體private placement的流動性溢酬已縮至約15bp，顯示機構投資人接受度提高；然而TMT／AI相關券的溢酬近四個月顯著wider，反映供給加速下的差異化定價，而初級市場new issue concession與registered bonds相近。該行的基礎情境為各主要信用市場Spread於2026年Q3先wider、其後逐步收斂，並預期全年gross issuance維持高檔；GS對USD IG、USD HY、EUR IG及EUR HY均提出全年供給預估，顯示其預期主要信用市場的發行活動仍將保持活躍。",
+      "url": "reports/gs-global-credit-trader-2026-08-20/"
+    },
+    {
+      "broker": "BofA",
+      "title": "High Yield & Loan Strategy",
+      "date": "2026-08-20",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "BofA指出，Q2 LevFin基本面持續改善，但HY與貸款指數內部的分化擴大。HY營收年增7.5%、調整後EBITDA年增9%，貸款分別為8.6%及9.5%；BofA預期Q3動能可延續，惟較高實質利率與困境風險仍構成壓力。AI是分化的主要來源：受惠於AI的發行人營收與獲利成長明顯優於受AI負面影響的同業，但效益仍集中在基礎建設供應鏈，尚未廣泛傳導至下游使用者。Technology與Metals的獲利表現相對突出，Real Estate則受可負擔性與審慎購屋環境拖累。市場面上，HY Spread當週大致持平、CCC表現較弱；BofA亦新增AI發行、交易與Spread的週度追蹤，以觀察AI資本支出對信用市場的影響。BofA的結論是，指數表面的穩健不代表所有信用風險相同，投資人需持續選擇性配置，並區分AI受惠程度、品質與流動性。",
+      "url": "reports/bofa-high-yield-and-loan-strategy-2026-08-20/"
+    },
+    {
+      "broker": "TD",
+      "title": "Corporate Credit Strategist",
+      "date": "2026-08-14",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "TD認為，US IG dealer inventories 在前兩週大幅增加，為在 Labor Day 前消化部位、迎接極繁忙的9月發行檔期，Spread 將需要 widening。8月 US IG 發行已達 $138Bn，接近2020年全月紀錄 $145Bn，TD估計 dealer inventories 兩週內增加約 $12Bn，明顯高於近年8月上半月最大的 $3.6Bn 增幅；該庫存估算可能有誤差。TD預期下週 US IG 發行為 $20 25Bn，且以其 $2.1Tn 的2026全年發行展望推算，8月可能創歷史新高。基本面方面，2Q26 非金融、非 Utilities US IG 的 gross leverage 降至 2.47x、net leverage 降至 1.89x，interest coverage 升至 7.06x；營收與 EPS 成長改善，gross margin 亦回升。當週發行 $57.325Bn，Financials、Industrials 與 Utilities 為主要來源，且10年期以上占比有限。當週 IG bond fund 與 ETF 的申購增至 $7.412Bn，而 HY bond fund 與 ETF 的申購降至 $159Mn，leveraged loan fund 與 ETF 的申購約為 $1.319Bn。當前 US IG Spread 為 78bps，與 95bps 的6個月目標仍有差距。TD維持 US IG 6個月 Spread 目標 95bps。資金工具方面，US IG corporate bond ETF AUM 年增至 $377Bn，agg type IG ETF AUM 升至 $655Bn，TD認為個人投資人對具吸引力固定收益收益率的需求仍將支撐此趨勢。",
+      "url": "reports/td-corporate-credit-strategist-2026-08-14/"
+    },
+    {
+      "broker": "JPM",
+      "title": "European Credit Weekly",
+      "date": "2026-08-14",
+      "assets": [
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "JPM指出，EUR IG 在過去三個月的交易區間僅 5.3bps，介於 86.5bps 與 91.8bps，接近歷史最低波動水準。市場目前大致忽略美伊衝突及 hyperscaler 次產業的不確定性：儘管 hyperscaler Spread 過去六週已 widening 10bps，整體 euro Senior Non Financial index 仍僅較伊朗戰事後低點寬 2bps，且債券分散度仍低。JPM認為，只要能源價格未再出現失序，信用市場可能繼續穿透新聞雜訊；但美國戰略石油儲備下降、中國進口回升、海峽通行受阻，以及歐洲天然氣壓力，皆可能令此觀點面臨考驗。需求面有所改善，EUR IG retail 自6月以來增加 €5.7Bn，惟年初至今 €9.4Bn 仍遠低於2025年同期的 €22.6Bn。EUR IG 當週僅由金融發行人帶動 €2Bn 供給，顯示夏季檔期仍偏清淡。JPM並預期9月至11月 EUR primary market 將有近 €27Bn hyperscaler paper，夏季後供給重啟將測試目前偏低的波動與分散度；當週 EUR IG 與 EUR HY 皆有申購，惟 GBP IG 出現贖回。",
+      "url": "reports/jpm-european-credit-weekly-2026-08-14/"
+    },
+    {
+      "broker": "BofA",
+      "title": "IG Credit Strategist",
+      "date": "2026-08-14",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "BofA預期 US IG Spread 在 2H 2026 緩步收緊並維持區間交易，2026 Spread target 為 65bps。其理由是經濟韌性、穩定偏高的 yield、信用品質改善、2H 季節性供給較低與需求仍強；主要風險則是 Iran 升級、M&A 與 AI 融資帶來的供給壓力。BofA仍偏好較寬 Spread 的 3–10yr belly，包括 hybrids、BBBs、Life Insurance、Utilities 及 BBs；10s30s Spread curve 應維持平坦，5s10s 則預期在較 hawkish 的 Fed 前景下 steepen。供給方面，BofA預估 2026 US IG gross supply 為 $2.1Tn，下一週為 $20–$25Bn；8 月供給可能高於原先 $140Bn 的估計，但報告未給出修正後數字。AI 方面，BofA以 2026、2027 每年約 $200Bn USD hyperscaler supply 的假設評估 index 比重上升；這是模型假設下的 house forecast，不是已實現供給。BofA認為較低價格、較佳 liquidity、較高 quality 與較短 maturity 已改變歷史 Spread 水準的可比性；同時，2Q leverage 下降與 earnings 成長提供基本面支持。策略上仍須留意較重的 M&A 與 AI supply、以及 geopolitics 對市場波動和 demand 的影響。相對價值方面，BofA以具有較寬 Spread 的防禦性與非循環部位為主，同時保留對較高質量及較短 maturity 結構改善的正面評價。",
+      "url": "reports/bofa-ig-credit-strategist-2026-08-14/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-08-13",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS認為，AI 相關供給增加與較高實質利率，正使信用市場的品質分化擴大。IG 中較高品質的 AA 與 A 集中承擔 hyperscaler 融資，且 duration 較長、Spread 緩衝較薄；USD IG 的 BBB 因較高 carry 與相對溫和的供給壓力持續優於高品質族群。GS 將 EUR IG 的配置轉得更積極，建議 BBB Overweight、A Neutral、AA Underweight。USD HY 方面，BB 面臨 AI 相關 project financing 供給壓力，GS 改為 BB Neutral、B Overweight、CCC Underweight；EUR HY 維持 BB Overweight、B Neutral、CCC Underweight。整體資產配置上，GS 對 USD 信用維持相對 EUR 的小幅偏好，但因估值、利率敏感度與供給技術面，USD 與 EUR 均改採 IG 對 HY Neutral。GS亦偏好 HY bonds 勝 leveraged loans，認為 loans 的 Software 曝險與較低品質結構，在風險趨避時較脆弱；浮動利率投資人則較適合 CLO mezzanine tranches。GS也認為 hybrid 相對 BBB 的額外 Spread 報酬仍具適度吸引力，並看好該溢酬隨市場規模擴張而收斂；Agency MBS 相對 IG 亦具分散配置效益。其 2026 Q3 Spread 目標為 USD IG 85bps、USD HY 305bps、EUR IG 91bps、EUR HY 320bps；全年 gross issuance 展望分別為 $2.1Tn、$400Bn、€850Bn 與 €125Bn。",
+      "url": "reports/gs-global-credit-trader-2026-08-13/"
+    },
+    {
+      "broker": "BofA",
+      "title": "High Yield & Loan Strategy",
+      "date": "2026-08-13",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "BofA認為，HY OAS 接近本輪緊縮低點時，單看指數 Spread 容易高估估值昂貴程度：目前指數的 BBB 比重較高、CCC 比重較低，但各 rating bucket 的風險補償才是跨週期差異的主要來源。相較 2007 年，當前低點的調整後風險補償較佳，惟額外補償主要集中在 B 與 CCC，BB Spread 反而較緊。BofA因此判斷 Spread 的下行空間有限、risk off 時的上行空間較大；歷史情境換算顯示 2007 年對應低點為 209bps，而 2022 與 2011 類型 shock 分別對應 577bps 與 807bps，這些為情境分析而非單一 base case。較高的 US10yr 與較短 duration 對 all in yield 和 total return 提供緩衝，但不改變風險報酬不對稱。短期市場方面，HY Spread w/w 收緊 4bps 至 271bps；BofA的 FY 2026e HY gross supply 為 $360Bn。BofA同時指出，當前較佳的 rating mix 會降低歷史壓力情境映射至現行指數後的 Spread 水準，但不會消除低品質 credit 在本輪持續落後的現象。投資人因此須同時衡量 Spread、yield、duration 與品質分化，而非只以 headline OAS 判斷部位的風險補償。",
+      "url": "reports/bofa-high-yield-and-loan-strategy-2026-08-13/"
+    },
+    {
+      "broker": "TD",
+      "title": "Corporate Credit Strategist",
+      "date": "2026-08-07",
+      "assets": [
+        "US IG",
+        "EUR IG"
+      ],
+      "summary": "TD認為，8月進入勞動節前的淡季前夕，雖然US IG Spread今年初段反而tighten 2bps，但投資人隨時間將關注9月發行量，可能對Spread帶來wider壓力；歷史型態顯示9月初可望重新tighten。發行面上，本週US IG已發行$81.55Bn，TD估計下週約$50Bn。跨幣別方面，7月Yankee US IG發行量大幅下降，TD認為因相對價值與全球投資流向分散，長期趨勢為減少；相反地，美國公司以歐元發行的Reverse Yankee債券量增加，該行預期企業分散融資來源及投資流向變化將使此類發行持續增加。基本面部分，強勁獲利、私人確定給付退休金資金充足及利率上升，均可能影響公司債需求與duration配置。基金流入本週明顯跳升，但本報告未提供美元HY的目標Spread或年度供給展望。",
+      "url": "reports/td-corporate-credit-strategist-2026-08-07/"
+    },
+    {
+      "broker": "JPM",
+      "title": "European Credit Weekly",
+      "date": "2026-08-07",
+      "assets": [
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "JPM認為，歐洲信用市場本週走強，EUR IG與EUR HY Spread分別tighten 2bps與8bps，近期企業獲利和歐元區景氣數據提供支持；但中東地緣衝突、油品供給及荷姆茲海峽重啟的不確定性仍是風險。該行注意到，EUR IG指數的BBB比重與duration近年同步下降，令目前Spread相較2021年低點看似較緊，但經信評與到期結構調整後，差距較小，且歷史評價仍偏高。儘管指數結構改善，JPM仍強調當前歷史評價偏貴，市場對供給的敏感度短期內不易消退。超大規模雲端業者債券雖在強勁財報後反彈，但Alphabet大型交易已使部分漲幅回吐；JPM認為歐元計價紙券相對大盤具價值，惟9月至11月預計€27Bn供給，將限制tighten空間。初級市場本週清淡，EUR IG基金流入廣泛，EUR HY亦有正向流入。",
+      "url": "reports/jpm-european-credit-weekly-2026-08-07/"
+    },
+    {
+      "broker": "JPM",
+      "title": "Credit Market Outlook & Strategy",
+      "date": "2026-08-07",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "JPM指出，US IG Spread連續6日tighten後，因Alphabet再度發行大型超大規模雲端業者債券而轉wider，顯示市場仍對此類供給敏感。該行認為，利率在年內高位附近趨於穩定、基金流入改善及企業獲利表現，均有助維持收益率買盤與BBB Spread表現；但投資人將為9月繁忙的初級市場做準備，加上伊朗與油價變動及傑克森霍爾會議可能提高利率波動，令近期進一步tighten空間有限。美元投資級債的市場擴張高度集中於超大規模雲端業者與資料中心，與其他產業的成長呈現明顯差異。JPM將2026年US IG總發行量展望自$1.92Tn上調至$2.0Tn，並估計超大規模雲端業者今年餘下期間仍將發行約$50Bn。該行強調應觀察扣除到期與票息後的淨供給，認為年末前此項供給增幅可望較溫和。",
+      "url": "reports/jpm-credit-market-outlook-and-strategy-2026-08-07/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-08-07",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS認為AI投資循環正加深信用市場的分化：AI相關發行人的Spread相對非AI同業已擴大，且多年的capex與融資需求將使這項風險溢酬持續存在；短期若AI issuance暫歇而非AI大型交易增加，差距可能收窄，但GS傾向淡化該走勢。市場亦開始重新評估hardware與infrastructure業者是否能隔絕於融資壓力之外，因其利潤可能須支援資本密集、變現期長的model provider。指數層面，GS預期AI供給對cash credit的壓力大於CDX及iTraxx等synthetic index，EUR IG尤然；但單一名稱AI CDS因避險需求而相對cash bond持續偏cheap。另方面，hyperscaler合計$1.5Tn租賃承諾中有$1.0Tn尚未開始，會在會計上低估未來leverage與流動性需求。GS維持Q3 2026 Spread預估為USD IG 85bps、USD HY 305bps、EUR IG 91bps、EUR HY 320bps，並維持四個市場的全年gross issuance預估。GS也提醒，rating agency對未開始租賃的adjusted debt認列方式不同，投資人不宜僅依帳面負債判斷hyperscaler未來的財務義務。",
+      "url": "reports/gs-global-credit-trader-2026-08-07/"
+    },
+    {
+      "broker": "BofA",
+      "title": "IG Credit Strategist",
+      "date": "2026-08-07",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "BofA維持US IG Spread在2026年下半年緩步收窄、但大致區間震盪的看法，年末目標為65bps。該行認為，具韌性的全球成長、較高且穩定的殖利率、良好信用品質、下半年季節性較少的供給與偏強需求，均提供支撐；主要風險是伊朗局勢與併購融資。配置上偏好3至10年期的hybrids、BBB、Life Insurance、Utilities及BB，並看好Autos、Pipelines、Insurance、Utilities與Energy，避開Consumer Products及Health Care。BofA估計4家排除MSFT的hyperscalers，在2026至2027年的資金供給較最新共識現金燒錢高約$375Bn，故現行融資節奏足以吸收未來12個月相近幅度的自由現金流下修；並認為下半年銀行與hyperscaler供給會下降。短期技術面方面，BofA預估8月10日當週US IG發行為$40至$50Bn、供需淨額為+$4.3Bn，8月全月發行約$140Bn。BofA亦認為AI融資疑慮未必轉化為更大債務需求，因營運現金流展望仍比資本支出估計更穩定。",
+      "url": "reports/bofa-ig-credit-strategist-2026-08-07/"
+    },
+    {
+      "broker": "Barclays",
+      "title": "US Credit Alpha",
+      "date": "2026-08-07",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "Barclays認為，具韌性的總經數據、強勁獲利及AI投資效益的初步證據帶動風險資產反彈，IG與HY利差分別單週收緊4bp與21bp；但利差仍處歷史偏緊區間，AI融資與選舉季節性風險尚未消失，故預期近期維持區間震盪。該行在IG與HY均偏好carry及volatility，對spread duration與value維持中立，並看空momentum；IG另看空cyclicals，HY quality亦維持負向。資料中心供給是HY結構性焦點：Barclays估計2026至2030年可有$273bn的HY資料中心債券發行，資料中心到2030年可能占HY指數逾11%、BB約18.7%。在期中選舉前，該行以歷史分析建議偏好BB相對長天期IG；選後則可透過B增加信用beta。在因子配置外，Barclays提醒資料中心債相對BB持續偏寬，將逐步改變指數利差與擔保債占比；期中選舉的歷史模式僅七個週期，配置仍須結合當前成長、Fed、起始利差與美債殖利率環境。投資人問卷反映供給是關鍵風險，但不等同該行自身發行估計。",
+      "url": "reports/barclays-us-credit-alpha-2026-08-07/"
+    },
+    {
+      "broker": "BofA",
+      "title": "High Yield & Loan Strategy",
+      "date": "2026-08-06",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "BofA指出，槓桿融資發行人的獲利趨勢仍具支撐，但若利率在較高水位維持更久，利息支出將壓縮低評等發行人的現金流覆蓋。HY的潛在重組池由3.4%升至3.7%，但仍低於貸款的5.0%；貸款中私人CCC的覆蓋率更降至0.7倍，違約風險最高。壓力測試顯示，BB與B1/B2大致可承受各種利率與成長情境；B3仍有降級壓力，但可藉削減資本支出保留緩衝。HY CCC須有至少2.5%的現金流成長才能維持覆蓋率高於1倍，而私人貸款CCC即使Fed不升息仍需約20%成長。BofA認為，HY的防禦性產業組成可使其重組池隨時間下降；在Spread偏緊下，產業相對價值更取決於估值。其偏好HY的Utilities、Technology與Travel/Leisure，並對Food Producers及Healthcare維持較保守立場。近期HY Spread收窄與fund flow流入提供技術面支撐，但較低品質貸款的脆弱度仍是主要風險。",
+      "url": "reports/bofa-high-yield-and-loan-strategy-2026-08-06/"
+    },
+    {
+      "broker": "TD",
+      "title": "Corporate Credit Strategist",
+      "date": "2026-08-03",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "TD回顧7月美元信用市場，指出中東衝突升溫推高能源價格與利率、Fed主席對通膨的表態，以及投資人對超大規模雲端業者估值與債券供給的疑慮，共同拖累風險資產。US IG現金Spread 7月wider 4bps至78bps，超大規模雲端業者與相關企業較集中的AA級表現偏弱；長天期債券wider幅度亦大於短券，使Spread曲線持續陡峭化，本月長天期表現也明顯落後短天期。發行面方面，7月US IG發行雖由6月回落至$142.04Bn，仍創同期紀錄，通訊業受人工智慧相關供給帶動占比明顯升高。TD估計8月發行量約$140 145Bn，未來3週節奏仍快；其2026年全年US IG供給展望為$2.1Tn。HY 7月總報酬相對其他固定收益類別較佳，但本報告未提出其目標Spread或供給展望。",
+      "url": "reports/td-corporate-credit-strategist-2026-08-03/"
+    },
+    {
+      "broker": "TD",
+      "title": "Corporate Credit Strategist",
+      "date": "2026-07-31",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "TD認為近期US IG相對EUR IG的弱勢，反映AI相關供給壓力正在影響美國信用市場，但也因此提供跨市場配置機會；在全球信用需求與供給都高度連動的背景下，TD建議偏好US IG多頭相對EUR IG，並指出Middle East戰事升溫使歐洲經濟更容易受到能源價格衝擊。報告同時維持對US IG 6M Spread target 95bps的看法，認為信用市場面對長端利率上升與股市下跌時，Spread影響大致中性，但Spread curve偏向flatten。技術面方面，當週US IG發行升至$30.915Bn，下週預估$50–55Bn，7月總發行創歷史同期新高；fund flow仍為正，但IG流入降至$2.909Bn。TD另指出Hyperscaler與Tech融資需求龐大，供應商融資可能使信用風險由大型支出者轉移至高品質晶片商，因此在該複合群內偏好compression交易。整體來看，TD並未把AI供給解讀為全面風險撤離，而是把它視為區域、品質與產業內部相對價值重新定價的來源。",
+      "url": "reports/td-corporate-credit-strategist-2026-07-31/"
+    },
+    {
+      "broker": "JPM",
+      "title": "European Credit Weekly",
+      "date": "2026-07-31",
+      "assets": [
+        "EUR IG"
+      ],
+      "summary": "JPM在本週報告聚焦歐元計價超大規模雲端業者債券。該族群自7月初以來Spread wider 18bps，明顯落後歐洲優先非金融債基準；該行認為，目前評價已有改善，但年底前仍可能有較多新券與可觀的新券溢酬，二級市場暫缺乏明確的tighten催化因素。供給方面，JPM將2026年度歐元計價美國超大規模雲端業者發行量展望由€70Bn下調至€50Bn，仍意味9月至11月初級市場將有約€26.5Bn供給。該行指出，年初至今此類債券以歐元發行的占比低於先前預期，而加幣、瑞郎及日圓等較小幣別占比增加；若下半年融資需求延續，供給可能回流流動性較高的貨幣。長期而言，該族群在EUR IG指數的比重可能明顯上升，並構成集中度風險。",
+      "url": "reports/jpm-european-credit-weekly-2026-07-31/"
+    },
+    {
+      "broker": "JPM",
+      "title": "Credit Market Outlook & Strategy",
+      "date": "2026-07-31",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "JPM認為，長天期殖利率升至2023年11月以來高點，短期仍有利於US IG的Spread表現，原因是收益率買盤可能重新進場；但市場已反映至2027年中前仍有2次升息，且伊朗衝突未見明確落幕，故正面效果的幅度較3月時更不確定。該行維持對超大規模雲端業者較偏正向的近期期望，預期科技債龐大供給壓力暫時緩和；不過利率波動、資金動能轉弱與勞動節後可能偏大的初級市場供給，均可能限制Spread tighten。市場亦面對利率波動與地緣政治的不確定性，使風險偏好較易受到供給與基金流向變化影響。JPM並認為金融債相對非金融債的領先幅度已偏大，近期大幅折讓發行的新券後續表現亦值得追蹤。US IG基金流入放慢，HY基金轉為流出，使市場對8月現金部位的需求提高。",
+      "url": "reports/jpm-credit-market-outlook-and-strategy-2026-07-31/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-07-31",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS認為，USD與EUR IG市場均朝年度gross issuance紀錄前進，leveraged finance供給亦維持活躍，但整體需求技術面仍可成為承接偏重供給的重要力量。USD IG與bank loan fund flow穩定，USD HY、EUR IG與EUR HY流入雖較溫和仍維持正值；不過資金明顯集中於passive ETF與短、中天期產品，長duration需求自5月以來落後。TRACE與TIC資料也支持公司債淨需求仍強，coupon payments可吸收USD IG及HY逾半數、EUR IG及HY約四成的2026年net supply。GS同時提醒，AI ecosystem債務發行的集中性可能使Spread依既有預估modestly wider，且風險偏向更明顯widen。其forecast dashboard預估Q3 2026 USD IG、USD HY、EUR IG及EUR HY Spread分別為85bps、305bps、91bps與320bps，全年gross issuance則為$2.1Tn、$400Bn、€850Bn及€125Bn；配置上偏好USD相對EUR，並傾向在HY內提高品質。GS亦指出新券Concession整體仍在低至中個位數bps，外資需求及次級市場淨買入均支持供給消化，但長端需求偏弱仍是值得持續觀察的限制，亦使指數表面tight估值下的供給承載能力成為市場焦點。",
+      "url": "reports/gs-global-credit-trader-2026-07-31/"
+    },
+    {
+      "broker": "BofA",
+      "title": "The European Credit Strategist",
+      "date": "2026-07-31",
+      "assets": [
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "BofA認為7月市場並非全面risk off，而是擁擠交易快速出清：TMT momentum創下美國與歐洲月度最差表現、Kospi自6月高點下跌39%、Nasdaq一度進入bear market，但金融、醫療、等權重指數與英國股市相對表現較佳。對歐洲信用而言，BofA認為TMT相關Spread雖已widen，但相對股票動能下跌仍偏tight，短期仍有進一步widen風險；反之Consumer相關股權部位尚未出現同等擁擠交易出清，因此IG Consumer債較適合作為防禦配置。報告同時指出，美國Fed按兵不動後金融條件反而急劇收緊，BofA認為Fed後續升息可能反而有助恢復通膨可信度並推動風險資產反彈；BoE則釋放較友善訊號，支持Sterling credit在8月相對Euro credit表現。BofA也認為AI尚未明顯改善非科技歐洲企業利潤率，能源成本仍是主要壓力，但Euro IG未來12個月coupon payments首度達€100Bn，有利中期技術面。",
+      "url": "reports/bofa-the-european-credit-strategist-2026-07-31/"
+    },
+    {
+      "broker": "BofA",
+      "title": "IG Credit Strategist",
+      "date": "2026-07-31",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "BofA認為7月US IG Spread終於widen，但主要仍是總體利率、股票與AI供給疑慮共同作用，而非信用基本面惡化；AI indigestion只解釋IG指數月內約+4.9bps widening中的+1.2bps。BofA維持2026年US IG Spread target 65bps，認為較高收益率、低衰退風險、穩健成長與信用品質仍可支持2H 2026 Spread緩步tighten並維持區間，但供給將是邊際定價因素。8月US IG供給預估$140Bn，與7月$142Bn相近且為2020年以來最高8月水準，不過到期與coupon income可抵銷部分技術面壓力。BofA認為AI Spread已明顯cheap，但M&A供給風險尚未充分反映，因此偏好AI／hyperscalers相對Health Care、Food & Bev。Sector配置延續Autos、Pipelines、Insurance、Utilities與Energy Sector Overweight，Underweight Consumer Products與Health Care。作者把FOMC後長端利率上升視為對信用的低劑量壓力，因它可抑制機會型供給並提高收益率需求；同時也提醒9月至11月M&A供給可能成為下一個估值壓力來源與配置焦點之一。",
+      "url": "reports/bofa-ig-credit-strategist-2026-07-31/"
+    },
+    {
+      "broker": "Barclays",
+      "title": "US Credit Alpha",
+      "date": "2026-07-31",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "Barclays認為，美國私人需求、通膨放緩與企業獲利仍支撐美國信用基本面；Fed雖在7月按兵不動且出現偏鷹派訊號，該行經濟學家仍預期政策利率維持至2027年。惟AI融資疑慮正由hyperscaler擴散至半導體、硬體與資料中心，AI相關IG及HY信用利差均走寬，並扭曲指數相對價值。Barclays認為BBB長天期信用曲線相對模型偏陡，30年券的高all in yield及個券10s30s延長交易具吸引力。由於CDX.IG受AI個券走寬的影響仍有限、指數評價偏緊，該行建議以CDX.IG保護及payer spread因應AI供給與總經風險可能外溢。此外，Barclays的新聞情緒研究顯示，負面新聞對信用報酬的拖累較強且持續時間較長，HY反應尤明顯，支持以經強化的情緒訊號建構系統化策略。該行亦提醒，長端供給持續或美債波動加劇可令曲線維持偏陡，延長交易宜以發行人相對價值而非單純方向為主。",
+      "url": "reports/barclays-us-credit-alpha-2026-07-31/"
+    },
+    {
+      "broker": "BNP",
+      "title": "Credit",
+      "date": "2026-07-31",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "BNP以1970年代經驗說明，通膨或升息本身未必立即造成信用利差走寬，真正關鍵是政策利率相對名目GDP成長的限制程度。該行估計Fed可能自年底起升息三次，但只要經濟維持韌性，信用條件仍可保持寬鬆；名目GDP需顯著放緩，或Fed升息接近150bps，才較可能形成壓力。企業亦受惠於高名目成長降低實質債務負擔，且目前槓桿低於前次利率衝擊時。對總報酬而言，通膨仍是風險，但美國IG與HY較2022年具更高carry及較短duration，面對收益率上升時的緩衝明顯優於2022年。策略上，BNP偏好美國IG Autos，該產業相對利差仍寬、供給占比下降且第二季財報改善；同時維持槓桿融資壓縮交易，偏好Loans相對HY及Single B、CCC相對BB。",
+      "url": "reports/bnp-credit-2026-07-31/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-07-30",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS認為在USD與EUR IG供給都朝年度紀錄前進、leveraged finance發行也維持活躍的背景下，需求技術面已成為信用市場能否承接供給的核心。雖然大多數指數層級Spread估值仍接近全球金融危機後歷史tight端，GS認為aggregate demand backdrop仍具支撐，可抵銷偏重供給；但AI ecosystem發行高度集中，仍可能依既有forecast推動Spread modestly wider，且風險偏向更大幅度widen。fund flow顯示USD IG與bank loan需求穩定，USD HY、EUR IG與EUR HY較溫和但仍為正，且資金明顯偏好passive ETF與短中天期基金。TRACE資料顯示次級市場公司債仍有淨需求，但長duration需求較弱；coupon payments也因2022至2023年升息週期後all in yield提高，成為重要被動需求。GS更新forecast dashboard：Q3 2026 Spread targets為USD IG 85bps、USD HY 305bps、EUR IG 91bps與EUR HY 320bps；全年gross issuance forecast為USD IG $2.1Tn、USD HY $400Bn、EUR IG €850Bn與EUR HY €125Bn。相對價值上，GS偏好USD相對EUR，並在兩地HY中偏好較高品質的BB、Underweight CCC，顯示其仍偏防守但不否定carry與需求支撐。",
+      "url": "reports/gs-global-credit-trader-2026-07-30/"
+    },
+    {
+      "broker": "BofA",
+      "title": "High Yield & Loan Strategy",
+      "date": "2026-07-30",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "BofA認為HY AI data center債近期widen主要是IG AI供給壓力、股票與信用市場情緒外溢，以及其IG tenant債券同步重新定價，並非HY整體基本面或技術面惡化。HY AI債自6月以來widen逾100bps，相對信評與duration調整後的ex AI HY已提供110bps premium；IG AI相對ex AI的premium亦升至60bps。歷史估值顯示AI債已偏便宜，但2H仍預期約$30Bn HY及$62Bn IG AI adjacent供給，發行人也不太可能因融資成本提高而停止投資，因此短期技術面仍可能疲弱。HY整體供給大致持平、fund flow轉正且coupon與到期資金提供需求，顯示AI壓力尚未廣泛擴散至ex AI Sector。作者建議分批布局，不嘗試精準判斷市場底部，並強調data center債須同時評估IG tenant信用、施工、地區政策與個別交易結構；IG與HY data center債相對tenant提供的premium接近，只承擔較低信評未必能取得足夠Spread補償。",
+      "url": "reports/bofa-high-yield-and-loan-strategy-2026-07-30/"
+    },
+    {
+      "broker": "TD",
+      "title": "Corporate Credit Strategist",
+      "date": "2026-07-24",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "TD認為，META資料中心融資與後續hyperscaler、併購相關發債將使TMT的弱勢擴散至其他產業，尤其長天期供給會推動公司債Spread curve變陡。地緣政治升溫雖推高油價，但歷史經驗顯示股票與IG Spread的反應通常不深且維持時間短；利率上升帶來的收益需求也暫時為Credit Markets提供緩衝，因此Energy Sector多部位可作為短期戰術避險。TD同時認為市場計入近2次Fed升息只是下限，主張布局更多bear flattening及公司債Spread curve steepener。技術面方面，本週IG供給降至$11.525Bn、下週預估回升至$40–45Bn，IG fund flow仍為正但已放緩。退休金風險移轉量僅占私人確定給付計畫資產不到1%，意味原先期待的大規模股票轉入公司債需求可能不會出現；在企業獲利仍強的同時，長天期信用市場仍需消化供給與需求結構的壓力。",
+      "url": "reports/td-corporate-credit-strategist-2026-07-24/"
+    },
+    {
+      "broker": "JPM",
+      "title": "European Credit Weekly",
+      "date": "2026-07-24",
+      "assets": [
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "JPM認為EUR Credit過去數週的韌性將面臨考驗，Spread的最小阻力方向轉為wider。主要壓力包括Middle East升級與能源成本、EUR相對USD及公債估值偏貴、8月季節性轉弱、投資人現金部位下降，以及ECB政策更具限制性。Brent一度突破$100/bbl，Europe天然氣庫存預估進入冬季前僅75%；若Credit Markets追上能源價格，可能出現較無序的widen。USD IG過去6週已widen 11bps，避險後比EUR IG wide 6bps，JPM認為EUR持續跑贏缺乏依據。過去10年8月EUR IG Spread中位數widen 7bps，且市場計入年底前ECB升息44bps，均不利於目前偏tight估值。OAT Bund與BTP Bund已先行widen，公債與Credit估值差距也提高EUR補跌風險。投資人現金部位偏低，使市場吸收秋季供給的能力進一步下降。策略上維持Industrials相對Consumer Overweight、GBP IG相對EUR IG Underweight及Single B選債。2026年目標仍為EUR IG 90bps、EUR HY 300bps；當週低供給雖提供緩衝，但新券溢價升至14bps，反映市場要求更高補償。",
+      "url": "reports/jpm-european-credit-weekly-2026-07-24/"
+    },
+    {
+      "broker": "JPM",
+      "title": "Credit Market Outlook & Strategy",
+      "date": "2026-07-24",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "JPM認為US IG正呈現兩個市場：hyperscaler Spread因龐大發債預期顯著widen，而其餘IG僅小幅變動。hyperscaler雖只占市場面額4.3%，卻占DTS風險8.1%，對指數超額報酬的重要性已大幅提高；資料中心債券收益率相對HY BB具有明顯溢價，估值開始具有吸引力，但投資人仍擔心下一筆初級市場交易會提供更便宜的切入點。JPM維持逐步增加hyperscaler部位的看法，因其Spread占all in yield約20%，目前不足以抑制發行人的資本支出與融資。市場整體則受低供給、再投資收入與高收益率支撐，儘管HG fund flow降至3個月低點。報告也指出AI發債已明顯改變長天期Spread curve與交易結構：hyperscaler占2026年長天期總發行26%，並推升Technology Sector、CDX與長天期債券的成交量；EUR與USD比較則顯示，供給規模比發行人集中度或ESG限制更能解釋相對表現。",
+      "url": "reports/jpm-credit-market-outlook-and-strategy-2026-07-24/"
+    },
+    {
+      "broker": "BofA",
+      "title": "The European Credit Strategist",
+      "date": "2026-07-24",
+      "assets": [
+        "EUR IG"
+      ],
+      "summary": "BofA觀察實質收益率上升正逆轉擁擠交易，European Credit Markets的領先者由AT1轉向B，EUR IG非金融債則由Autos Sector領先。Hyperscaler債務自2025年初$210Bn增至$460Bn，供給快速擴張已使EUR hyperscaler Spread首次wide於整體EUR IG，全球10年以上hyperscaler Spread也比同年期A信評債高80%；近期發行的長債價格部分已跌破90，顯示市場正在要求更高供給補償。下一輪財報的capex指引是關鍵：若再度上修，hyperscaler可能續跌，但Utilities與Industrials等AI enabler可能受惠。儘管油價在12天內上漲40%，EUR Credit Spread幾乎不變，BofA認為高收益率與低利率波動仍支撐需求。ECB可能於9月再升息，但若沒有工資等second round effect，2027年仍可降息並在年底前回到或低於2%；真正的尾端風險是工資壓力推高terminal rate、使curve更平並削弱零售信用需求。EUR BBB供給因大量升等而萎縮、估值明顯compress，BofA因此提出以20% BB與80% A組合替代BBB曝險，在保留較高品質的同時尋求類似歷史報酬。",
+      "url": "reports/bofa-the-european-credit-strategist-2026-07-24/"
+    },
+    {
+      "broker": "BofA",
+      "title": "IG Credit Strategist",
+      "date": "2026-07-24",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "BofA認為Brent油價接近$100已提高Iran情勢再升級的風險，但US IG與股票尚未充分反映，且先前cyclical sector的弱勢已完全收復，使避險成本仍相對低。策略上建議由European Yankee轉向美國發行人與Energy Sector，並減碼相較過去壓力期偏rich的Leisure、Yankee Banks、Transportation及Autos Sector。報告的核心判斷是2026年Sector表現主要由供給驅動：發債成長快的AI、Telecom與Big Six US Banks表現落後，供給少的Sector則可能缺乏相對價值。全年$2.1Tn供給預估將使IG指數面額增加8.1%，規模雖重但並非歷史極端；hyperscaler與併購融資偏長天期，已使10s30s Spread curve比利率模型顯示的水準陡約5bps。報告另篩選具有change of control $101條款的潛在LBO標的，指出低於面額的債券可能受惠於收購事件。BofA仍預期較高收益率、穩健經濟與下半年供給放緩可支持Spread逐步tighten，但短期應透過發行人地區、Sector與curve配置管理Iran及供給風險。",
+      "url": "reports/bofa-ig-credit-strategist-2026-07-24/"
+    },
+    {
+      "broker": "Barclays",
+      "title": "US Credit Alpha",
+      "date": "2026-07-24",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG"
+      ],
+      "summary": "Barclays認為信用市場近期轉弱，主因AI與hyperscaler供給預期、地緣政治及關稅消息，而投資人部位偏樂觀、IG fund flow又出現明顯流出；不過較高公債收益率與優於預期的企業獲利仍可吸引高品質信用買盤，因此預期Spread承壓但不至於大幅widen。2026年US固定收益淨發行預估約$3.3Tn，企業、證券化產品與市政債供給增加，將超過美債淨供給下降的抵銷效果，其中AI融資已明顯拉長新券duration。報告同時顯示ETF正由投資工具轉為信用市場基礎設施，參與流動性轉移、價格發現與衍生品避險；CLO ETF資產亦在2年內接近4倍。跨幣別觀察顯示hyperscaler的EUR債雖跑贏USD債，但幅度相對供給差異有限，代表投資人開始把全球融資管線納入定價。HY指數表面信評改善部分來自secured結構，但較高回收率仍使預期損失接近歷史低點；NEE 40NC20 hybrid則因長天期收益需求而明顯偏rich。",
+      "url": "reports/barclays-us-credit-alpha-2026-07-24/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-07-23",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS認為HY市場的主要風險不是廣泛信用惡化，而是最弱「left tail」與較高信評群體持續分化。USD與EUR CCC Spread年初至今分別widen 173bps與141bps，但BB及B仍接近歷史tight區間；油價、長天期公債收益率與AI相關供給上升，將進一步壓縮高槓桿企業的利潤與再融資能力。GS因此把2026年底US HY違約率預估上調至4%、European HY上調至5%，但維持貸款違約率預估不變。報告特別指出LME雖能降低首次債權人haircut，卻更可能留下不可持續的資本結構，導致2至3年後再次違約且第二次損失更大，使違約循環被拉長。壓力目前集中於消費、資本密集、Technology與Communications Sector，約4%的USD及EUR HY債券Spread超過1,000bps。Private Credit整體實現損失與公開市場方向一致，Q1 2026 covenant default率仍接近5年平均，但non accrual與amended PIK上升值得持續監控。",
+      "url": "reports/gs-global-credit-trader-2026-07-23/"
+    },
+    {
+      "broker": "BofA",
+      "title": "High Yield & Loan Strategy",
+      "date": "2026-07-23",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "BofA認為LevFin面對Fed偏鷹、Iran油價風險與AI供給疑慮仍具韌性，HY Spread接近tight、收益率約7%，貸款技術面更因供給下降快於需求而改善；相較之下，IG年化供給由1年前$1.6Tn升至$2Tn，需求又因投標減少及基金流入放緩而轉弱，短期可能由IG承壓、HY穩定形成Spread compression。基礎情境下，BofA以HY作為LevFin核心，預估未來12個月總報酬5.9%，並伺機增加貸款；貸款因軟體與AI曝險、到期牆及CCC信評遷移偏弱，違約率可能升至5%，總報酬僅4.3%。Private Credit總報酬預估5.6%，雖高coupon提供支撐，但違約與流動性風險使風險報酬不如公開市場。AI資料中心調查顯示，投資人相信融資管道仍在，但已更重視供給吸收、tenant品質與跨市場再融資能力。若AI生產力帶動高於趨勢成長，貸款與Private Credit可受惠於較高基準利率與較低信用損失，但BofA仍不預期Private Credit回到過往雙位數報酬。",
+      "url": "reports/bofa-high-yield-and-loan-strategy-2026-07-23/"
+    },
+    {
+      "broker": "TD",
+      "title": "Corporate Credit Strategist",
+      "date": "2026-07-17",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "TD認為US IG需要需求進一步增加才能消化hyperscaler與M&A供給，否則Spread將widen，6個月目標為90–100bps，相較當時76bps。2026年高收益率且利率波動未同步上升，帶動基金、ETF、保險、bank與外國投資人需求，但TD不預期外國需求能維持近期強度：Japan投資人在匯率避險後持有10年期US IG的收益率已比JGB低約40bps，後續新增JPY資金更可能留在國內。Hyperscaler供給也扭曲信評相對價值，使A信評Industrials一度比AA略tight；TD維持Technology、Communications及hyperscaler防禦立場。短期企業財報與$52Bn再投資收入可吸收bank發行，但fund flow已放緩、交易商庫存升高，8月前提前融資可能擴大Spread壓力。企業獲利仍強，S&P 500 Q2綜合獲利年增預期升至25.6%；HY與貸款違約率則暫時下降至4.17%與5.04%。TD仍提醒浮動利率貸款後續違約可能隨Fed偏鷹而回升。",
+      "url": "reports/td-corporate-credit-strategist-2026-07-17/"
+    },
+    {
+      "broker": "JPM",
+      "title": "European Credit Weekly",
+      "date": "2026-07-17",
+      "assets": [
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "JPM認為EUR Credit面對Middle East衝突、油氣價格與Semiconductor股票下跌仍具韌性，但投資人已不再保留大量現金等待回檔，而是接受昂貴Spread並追求defensive carry。Roadshow回饋顯示EUR IG缺乏明顯新增資金，過去12個月淨流入已由2024年初高峰€32Bn降至€13Bn；HY與槓桿貸款技術面相對較強，受持續流入及CLO formation支撐。JPM偏好Corporate Hybrid，BBB／BBB 工具的sub senior利差約80bps，並維持Industrials相對Consumer的Overweight及GBP IG相對EUR IG的Underweight。Hyperscaler觀點分歧：長天期AA供給具有新券溢價，但供給飽和、發行人集中及ESG限制使投資人沒有急於進場。貸款投資人另關注2028年到期牆、Sponsor注資意願及CLO equity報酬，但對Private Credit系統性外溢的擔憂已下降。多數帳戶仍偏short duration，並認為Rates Markets的波動與機會可能高於Credit Markets。策略目標維持EUR IG 90bps、EUR HY 300bps，全年總發行估計€730Bn與€140Bn；當週實際供給僅€6Bn與€1.6Bn。",
+      "url": "reports/jpm-european-credit-weekly-2026-07-17/"
+    },
+    {
+      "broker": "JPM",
+      "title": "Credit Market Outlook & Strategy",
+      "date": "2026-07-17",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "JPM認為hyperscaler Spread selloff已過度，應逐步增加部位。該群體Spread約132bps，較6月初101bps明顯widen，但對整體JULI只造成約4bps影響；相較BB 188bps，JPM認為財報與資本支出指引可能成為近期反彈催化劑。市場擔心保險公司接近單一發行人上限，但JPM認為這個判斷忽略US HG市場規模擴大、保險資產分母及歷史集中度；各hyperscaler距3%指數權重仍有合計約$1.7Tn理論融資空間，足以涵蓋未來5年AI生態系約$1.9Tn新增HG借款。保險公司截至2025年底對主要hyperscaler均低配，且年金資產池持續擴大，仍有增加公開HG配置的空間。技術面仍混合：HG流入降至11週低點$6.5Bn、交易商庫存位於年內高位，但當週供給$48Bn低於$52Bn再投資收入。相對價值方面，JPM認為30年期tax exempt Muni相對HG公司債偏rich，長天期公司債更具吸引力。",
+      "url": "reports/jpm-credit-market-outlook-and-strategy-2026-07-17/"
+    },
+    {
+      "broker": "BofA",
+      "title": "IG Credit Strategist",
+      "date": "2026-07-17",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "BofA的7月投資人調查顯示IG與HY情緒轉弱，主要原因是技術面，而非信用品質惡化。投資人平均預期下半年仍有約$100Bn跨幣別hyperscaler供給，IG淨Overweight由4月30%降至7%，HY投資人預期3個月Spread widen的淨比例則由11%升至69%；同時78%的IG與75%的HY受訪者認為Spread高估。違約率預期卻由2.8%降至2.4%，說明受訪者擔心的是昂貴估值與供給，而不是全面信用衰退。BofA自身仍維持US IG於2026年tighten至65bps的看法，理由是收益率偏高、經濟具韌性、下半年供給較低且需求仍強。Sector配置偏好Autos、Pipelines、Insurance、Utilities與Energy，減碼Consumer Products及Health Care。Fed方面，BofA經濟學家預期未來12個月升息75bps，較高收益率可支撐需求；策略上偏好5s10s IG Spread curve steepener並逢低增加cyclical Sector。低債券價格與change of control條款也使多數LBO對IG持有人偏正面，約8%的指數可能受惠於收購事件。",
+      "url": "reports/bofa-ig-credit-strategist-2026-07-17/"
+    },
+    {
+      "broker": "Barclays",
+      "title": "US Credit Alpha",
+      "date": "2026-07-17",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "Barclays認為US Credit基本面仍穩健，但利多已難推動Spread進一步tighten。June CPI與PPI低於預期、企業獲利及消費保持韌性，IG收益率也高於5.3%，但IG當週仍widen 3bps至77bps，顯示昂貴估值與AI融資逐漸成為主要限制。Hyperscaler年初至今固定利率USD發行$156Bn，跨幣別與浮動利率合計$218Bn，全年IG發行預估約$285Bn；其市場權重僅4.2%，卻占指數DTS 8.3%，已超過Big Six bank。新券認購下降、Concession上升及AI相鄰融資增加，使Barclays將US HG Technology由Market Weight降至Underweight，雖然長天期hyperscaler已接近BB Spread。Barclays預期供給壓力最終可能由Technology擴散至整體指數，但高收益率與企業獲利可限制widen幅度，因此整體Spread仍以區間為主，不追逐近期相對便宜的長天期債券。Bank監管放寬可提高ROE與市場中介能力，短期對整體市場偏正面。HY方面，Barclays偏好Technology、Leisure、Pharmaceuticals、Retailers及Other Financial，並下調Supermarkets至Underweight。",
+      "url": "reports/barclays-us-credit-alpha-2026-07-17/"
+    },
+    {
+      "broker": "BNP",
+      "title": "Credit",
+      "date": "2026-07-17",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "BNP認為美國HY中的CCC債具有吸引力的carry，現有利差可承受約316bps擴大，才會使未來一年超額報酬轉負；在名目GDP成長仍強、信用條件未明顯收緊且違約率可能已見頂的環境下，低rating信用債持續大幅落後的機率有限。惟指數表象受到困境發行人與產業集中影響，前十大發行人占CCC指數34%，有線通訊及衛星電視亦占逾23%，不宜直接全面配置。剔除利差逾1,000bps的困境債後，CCC走勢其實接近整體HY，顯示近期差異主要來自少數特殊事件，而非全面性惡化。BNP因此主張以精選方式參與，偏好具正向營運動能、rating調整可能落後且估值仍具吸引力的跨產業債券籃子，藉此取得spread pick up，同時控制單一發行人、AI衝擊及再融資風險。",
+      "url": "reports/bnp-credit-2026-07-17/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-07-16",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS本期認為信用市場尚未出現明顯「crowding out」。在USD IG中，tight Spread與高無風險利率使all in yield主要由利率組成，並吸引yield based投資人支撐Spread；但AI相關供給擴大也使市場討論其是否擠出美債需求、結構化產品需求或非AI corporate供給。GS判斷AI長天期發行可能影響部分美債需求，但長端美債估值仍主要由總體與財政因素主導；對廣義固定收益配置者而言，更相關的比較是IG corporates相對其他高品質Spread產品。GS估計2025以來AI相關非hyperscaler發行已有USD IG $271Bn、USD HY $34Bn，hyperscaler跨IG市場發行$194Bn，且今年AI ecosystem發行DV01約$220Mn/bp。即便供給偏重，GS仍預期Spread只會modest widen，因良好總體背景與高收益率需求可抑制指數層級widen。Forecast dashboard維持Q3 2026 Spread target：USD IG 85bps、USD HY 305bps、EUR IG 91bps、EUR HY 320bps。作者也指出非AI供給仍在高檔，代表企業融資需求並未被AI排擠，而是整體供給週期同步偏強。",
+      "url": "reports/gs-global-credit-trader-2026-07-16/"
+    },
+    {
+      "broker": "BofA",
+      "title": "High Yield & Loan Strategy",
+      "date": "2026-07-16",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "BofA認為hyperscaler投資循環若以capex占GDP衡量已接近後期，但若以自身營收與EBITDA衡量仍在中段，因此AI建設仍有延續空間。Capex占GDP已達1.7%，若2.0%為歷史上限，年增空間約$85Bn；但Capex／Sales與Capex／EBITDA分別顯示約$230Bn及$250–370Bn空間，代表真正限制可能先來自電力、土地、勞工與供給鏈，而非企業現金流。AMZN $25Bn新券表現疲弱、超額認購僅2.5倍，使IG投資人開始要求更高Concession，但BofA認為這是重新定價與風險重新分配，不是融資市場關閉。Hyperscaler仍可轉向HY、貸款及Private Credit，AI相鄰的Data Center、Neocloud與Utilities也能持續融資。核心風險是AI monetization與token成本能否支持新增投資；較便宜的開放模型及企業自建系統可能降低外部服務價格。策略上維持建設循環延續，但應更重視發行人選擇與邊際融資成本。",
+      "url": "reports/bofa-high-yield-and-loan-strategy-2026-07-16/"
+    },
+    {
+      "broker": "JPM",
+      "title": "European Credit Weekly",
+      "date": "2026-07-10",
+      "assets": [
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "JPM觀察EUR Credit在油價、Bund收益率與股票波動升高的環境下仍明顯tighten，EUR IG當週tighten 3bps、EUR HY tighten 14bps，反映Spread吸收部分利率變動與7月季節性需求支撐。初級市場因US假期與企業財報靜默期而降溫，EUR IG發行€13Bn、EUR HY €3.1Bn；新券供給偏低同時，fund flow連續改善，EUR IG流入€880Mn，EUR HY流入€708Mn並連續第4週為正。2026年截至報告日，EUR IG總發行€455Bn、略高於2025年同期，European currency HY為€92Bn、低於前一年同期；前一月底兩者淨發行分別為€129Bn及€40Bn。HY需求強於IG，且EUR HY Spread降至305bps，其中B tighten 17bps、BB tighten 13bps，但CCC維持1,277bps且年初至今仍widen 141bps，顯示低信評尾端風險未消失。當週HY總報酬雖為正，CCC仍為負，進一步顯示投資人偏好較高品質的收益而非全面增加風險。JPM未在本期提出新的方向性配置調整，重點在於夏季低供給、穩定流入與市場內部品質分化。",
+      "url": "reports/jpm-european-credit-weekly-2026-07-10/"
+    },
+    {
+      "broker": "JPM",
+      "title": "Credit Market Outlook & Strategy",
+      "date": "2026-07-10",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "JPM認為HG Spread在突發供給與Iran風險下只是緩步widen，高all in yield及基金流入仍提供支撐。當週$51Bn供給遠高於傳統夏季節奏，Amazon新增$24.2Bn指數合格債務後將成為最大非金融發行人，且Oracle降至BBB ，使投資人擔心hyperscaler集中與後續發行；交易商庫存也升至年內高點。不過HG基金仍流入$10.6Bn，下一週到期與coupon再投資收入達$52Bn，可協助吸收bank供給。JPM認為BB相對BBB已過度tight，若油價或地緣政治惡化，BBB應相對跑贏。US HG信用品質仍佳，Q2升等債務$221Bn、降等僅$49Bn，BBB占指數43.1%為2011年以來最低。全年供給預估$1.92Tn，M&A供給$261Bn；新券在上半年只有一半月份於月底前tighten，顯示廣泛供給已降低新券必然跑贏的機率。排除hyperscaler後結果仍相近，壓力並非只來自單一發行群體。",
+      "url": "reports/jpm-credit-market-outlook-and-strategy-2026-07-10/"
+    },
+    {
+      "broker": "BofA",
+      "title": "The European Credit Strategist",
+      "date": "2026-07-10",
+      "assets": [
+        "EUR IG"
+      ],
+      "summary": "BofA認為European Credit Markets仍受高收益率支撐，即使US Iran緊張再起，Spread也幾乎沒有明顯反應；反而需要留意公債大幅上漲、收益率下降後可能造成Credit Spread widen。市場內部輪動顯著，EUR AT1當月大幅tighten，Retail則widen，顯示估值分化已取代單一方向交易。Hyperscaler全球發行年初至今接近$200Bn，近期新券超額認購由2025年11月約4.2倍及2026年2月約4.7倍降至約2倍，供給消化壓力開始浮現；但CHF、EUR與CAD債券受USD大型發行影響相對有限，可提供跨幣別相對價值。長期來看，企業債過去10年報酬明顯優於多國公債，反映企業資產負債表較能調整，其中BB與EUR HY累計報酬分別約43%及46%。AI配置方面，BofA偏好Telecom、Utilities與Real Estate等「hard asset」Sector，以降低軟體與服務業遭AI取代的風險，並把這項策略視為GBP Credit Markets的重要配置方向。",
+      "url": "reports/bofa-the-european-credit-strategist-2026-07-10/"
+    },
+    {
+      "broker": "BofA",
+      "title": "IG Credit Strategist",
+      "date": "2026-07-10",
+      "assets": [
+        "US IG"
+      ],
+      "summary": "BofA將2026年US IG總發行預估調高至$2.1Tn，但仍認為下半年供給增速放緩、較高收益率與強勁需求可使Spread逐步tighten，全年目標維持65bps。上半年供給年增32%，增加量幾乎全部來自AI、bank與M&A；BofA估計下半年平均每月發行$148Bn，低於上半年$202Bn。Hyperscaler年初至今跨幣別發行$194Bn，AI相關供給合計$270Bn，已造成新券認購下降與30年期債券widen，但BofA認為重供給大致已反映在估值。M&A是下半年唯一預期比上半年更重的主要供給來源，全年供給估計$350Bn；bank與Yankee bank供給則預期由上半年高峰回落。配置上偏好BBB、3至10年期較wide的Hybrid、Life Insurance、Utilities與BB，Sector Overweight包括Autos、Pipelines、Insurance、Utilities及Energy，Underweight Consumer Products與Health Care。Q2企業獲利年增共識為21%，歷史上實際結果又常優於季初預期，也支持市場消化較高供給，限制指數大幅widen並穩定需求。",
+      "url": "reports/bofa-ig-credit-strategist-2026-07-10/"
+    },
+    {
+      "broker": "BofA",
+      "title": "High Yield & Loan Strategy",
+      "date": "2026-07-10",
+      "assets": [
+        "US HY"
+      ],
+      "summary": "BofA認為低信評LevFin已成為少數具有明顯compression空間的市場，但機會取決於企業獲利能否改善並抵銷高coupon、到期牆與AI替代風險。BofA把HY Q2營收與adjusted EBITDA年增預估上修至10%及11%，貸款則均上修至9%；若成長延續，B3是風險較可控的配置，因潛在降評供給估計僅$15Bn，且相對B2提供約210bps Spread。CCC貸款的非distressed收益率雖達19.5%，但供需更脆弱：未來3年到期且價格低於90的B3／B 貸款約$37Bn，其中$28Bn來自AI敏感Sector，而CLO新增CCC承接能力僅約$21Bn。Private Credit目前自身信用壓力提高，不一定能像2023年一樣承接降評貸款，因此剩餘缺口更依賴共同基金及機會型買盤。BofA因此把B3視為較乾淨的compression交易，CCC則需等待獲利改善、降評壓力下降或新的opportunistic demand。當週HY Spread仍tighten 4bps，但CCC widen 7bps，反映指數與尾端信用持續分化。",
+      "url": "reports/bofa-high-yield-and-loan-strategy-2026-07-10/"
+    },
+    {
+      "broker": "Barclays",
+      "title": "US Credit Alpha",
+      "date": "2026-07-10",
+      "assets": [
+        "US IG",
+        "US HY"
+      ],
+      "summary": "Barclays認為信用市場在更高油價、實質收益率上升與大量供給下仍具韌性，IG Spread大致持平、HY Spread tighten，但這不代表應無差別增加beta；市場仍由高all in yield、強技術面與良好基本面支撐，不過能承受下一次衝擊的緩衝變薄。作者預期7月Spread維持range bound，並在US IG與HY factor配置上維持negative quality、positive spread duration、carry與volatility；HY中CCC已明顯落後，顯示低品質信用對高油價、高利率與成長風險更脆弱。AI融資方面，Barclays認為data center債可能成為hyperscaler融資相對價值甜蜜點，隨建設與租賃風險下降，DC bonds相對租戶unsecured債的Spread ratio應compression。供給面，Barclays將2026年hybrid/preferred gross supply forecast小幅上修至$120Bn，因Utilities與Non Financials發行擴大、2H call wall高且新發行人增加。報告也提醒前端高品質IG、jumbo AI供給與lower quality HY是市場最需要留意的壓力點，因此應重視carry但提高選券門檻與風險紀律。",
+      "url": "reports/barclays-us-credit-alpha-2026-07-10/"
+    },
+    {
+      "broker": "GS",
+      "title": "Global Credit Trader",
+      "date": "2026-07-09",
+      "assets": [
+        "US IG",
+        "US HY",
+        "EUR IG",
+        "EUR HY"
+      ],
+      "summary": "GS本期討論AI相關融資如何需要多元市場共同承接。Technology Sector大量發債使2026年USD IG gross supply年初至今升至$1.37Tn，明顯高於近年步調，並使GS對全年$2.1Tn供給forecast的風險偏向上行。GS股票研究團隊估計五大hyperscalers在FY2025至FY2030合計AI capex約$5.8Tn，且2026年共識capex已占其大部分operating cash flow，因此債務融資是必要組成。GS認為僅靠USD IG市場吸收大部分AI融資，會使hyperscaler指數權重大幅高於現行市場慣例；若以大型US Banks作為潛在上限，五大hyperscalers仍有約$510Bn增量債務容量，但未來需要IG、HY、loan、private infrastructure、project finance式JV與多幣別市場共同吸收。相對價值上，GS延續偏好Banks作為核心持有，並把USD與EUR Banks觀點擴大至Regionals、Yankees與EUR Tier 2。報告同時維持四大市場Spread與供給forecast，讓AI融資討論可與既有USD、EUR IG/HY配置框架連接；其重點是市場容量仍大，但集中度限制會提高定價分化。",
+      "url": "reports/gs-global-credit-trader-2026-07-09/"
+    }
+  ],
+  "weekly": [
+    {
+      "date": "2026-08-21",
+      "text": "每週信用市場券商報告摘要及市場想法｜2026/08/21 本週重點 US IG： JPM與Barclays均認為基本面仍支撐Credit Spread短期整理，但TD預期Labor Day後前置的9月供給與需求放緩將帶來wider壓力；GS則預估US IG Spread於2026年Q3為85bps、後續逐步收斂。（Barclays、GS、JPM、TD） EU： JPM認為Euro credit可承受近期利率波動，當週EUR IG Spread widened 1bp至90bps、EUR HY Spread tightened 5bps至305bps；GS預估Q3分別為91bps與320bps，BofA則提醒hyperscaler供給增加可能使高品質Euro IG在暑假後更脆弱。（BofA、GS、JPM） HY： JPM指出HY Spread當週widened 7bps至312bps、資料中心相關HY Spread widened 46bps至420bps；Barclays發現第二順位債風險溢酬顯著擴大，BofA亦觀察到CCC表現較弱，顯示信用風險持續依品質、資本結構與AI受惠程度分化。（Barclays、BofA、JPM） 1. US IG 1. 利差觀點 1. 基本面支撐與供給壓力並存： JPM表示US IG Spread於93至96bps區間波動，仍接近其95bps目標；Barclays亦認為企業基本面與all in yield支撐短期區間整理，但TD認為需求下降與供給創高將使新增債券難以在沒有Spread wider下被消化，GS則預估2026年Q3為85bps、之後逐步收斂。（Barclays、GS、JPM、TD） 2. 技術面 1. 初級市場供給與私募融資擴張： JPM指出當週US IG供給為$20Bn、基金流入為$5.4Bn，未來一至兩週的輕供給與月底需求可先改善技術面；TD預估Labor Day後前兩週發行量將達$140 150Bn、9月全月為$245 255Bn，而GS指出AI帶動年初至今USD IG非金融private placement供給逾$270Bn。（GS、JPM、TD） 3. 相對價值 1. 評等、金融與AI信用的分化： JPM認為USD IG相對GBP信用具較佳相對價值，並建議布局BBB A Spread在9月BBB發行季節性增加時decompress；Barclays認為Big 6 banks在1 10年期的71bp Spread，較hyperscaler的57bp更具相對價值，而GS指出TMT private placement溢酬近四個月明顯wider。（Barclays、GS、JPM） 4. 其他值得關注的議題 1. AI融資與長端需求： TD將2026年US IG供給預估上調至$2.2Tn；Barclays估計hyperscaler今年迄今跨幣別IG發行約$248Bn，並預估全年跨幣別發行約$285Bn，GS則估計無registration rights而無法納入指數的USD IG債券約$2.4Tn，顯示AI融資對供給結構與指數組成的影響持續提高。（Barclays、GS、TD） 2. EU 1. 利差觀點 1. 短duration提供利率避震： JPM指出當週EUR IG Spread widened 1bp至90bps、EUR HY Spread tightened 5bps至305bps，並認為產品較短的duration與穩健基本面降低長端利率上升的直接衝擊；GS預估EUR IG與EUR HY Spread在2026年Q3分別為91bps與320bps，之後逐步收斂。（GS、JPM） 2. 技術面 1. 初級市場與fund flow： JPM表示當週19家IG發行人於歐元市場定價€11Bn、EUR HY沒有新發行，EUR IG與歐洲HY基金分別流入€376Mn與€82Mn，顯示fund flow雖放緩但仍維持正值；GS對2026年EUR IG及EUR HY gross issuance的預估分別為€850Bn與€125Bn。（GS、JPM） 3. 相對價值 1. 產業與期限配置： JPM在Euro IG低分化環境中維持Industrials相對Consumer的交易；BofA認為若較陡的殖利率曲線環境延續，較長天期融資者如Utilities與Telecoms，以及Reverse Yankee Spread可望受惠。（BofA、JPM） 4. 其他值得關注的議題 1. 高品質供給的潛在排擠： JPM預估2026年EUR IG Spread為90bps、gross issuance為€730Bn，EUR HY Spread為300bps、gross issuance為€140Bn；BofA提醒需觀察hyperscaler債券供給是否增加並排擠其他高品質Euro IG需求，特別是AA級信用近期相對BBB級落後。（BofA、JPM） 3. HY 1. 利差觀點 1. AI與低評等券的壓力： JPM表示HY Spread當週widened 7bps至312bps，資料中心相關HY Spread widened 46bps至420bps；BofA則指出其追蹤的HY Spread約273bps且大致持平，但CCC Spread widened 10bps，GS則預估2026年Q3 USD HY Spread為305bps。（BofA、GS、JPM） 2. 技術面 1. AI融資與貸款需求分化： JPM指出貸款受到基金流入與CLO淨發行改善支持而週報酬優於HY，但8月初級市場活動較去年同期明顯減少；BofA新增AI相關發行、交易與Spread的週度追蹤，Barclays則估計年初至今美元AI／數位基礎設施HY融資約$39.9Bn。（Barclays、BofA、JPM） 3. 相對價值 1. 資本結構與信用選擇： BofA認為HY與貸款指數內部的分化擴大，投資人應區分AI受惠程度、品質與流動性；JPM指出CLO對困境貸款維持Underweight、對表現良好的貸款維持Overweight，Barclays則發現2L與1L債券的中位OAS差已擴大至396bps，反映第二順位風險補償提高。（Barclays、BofA、JPM） 4. 其他值得關注的議題 1. 基本面與到期牆： BofA預期Q3的HY與貸款營收年增約9.5%與10.5%，兩者調整後EBITDA成長約10%；JPM則指出2028年與2029年HY債及institutional loans到期量將分別升至$345Bn與$500Bn，低評等借款人的資本市場進入能力將是後續關鍵，GS對2026年USD HY gross issuance預估則為$400Bn。（BofA、GS、JPM）",
+      "url": "weekly/2026-08-21/"
+    },
+    {
+      "date": "2026-08-14",
+      "text": "每週信用市場券商報告摘要及市場想法｜2026/08/14 本週重點 US IG： BofA預期2H 2026 US IG Spread 緩步收緊並以65bps為2026目標，TD則認為為消化dealer inventories並因應9月發行高峰，Spread需要widening，6個月目標為95bps；兩家券商對短期方向看法分歧，但均將供給列為關鍵變數。 EU： JPM認為EUR IG在極低波動與狹窄交易區間下，將面對能源與地緣政治風險及夏季後hyperscaler供給重啟的測試；GS對2026 Q3 EUR IG的Spread目標為91bps。 HY： BofA認為HY Spread在目前水準的下行空間有限、risk off時widening風險較大；GS的2026 Q3目標為USD HY 305bps及EUR HY 320bps，並持續以品質與供給差異作為配置主軸。 1. US IG 1. 利差觀點 1. 短期方向分歧： BofA預期US IG Spread在2H 2026緩步收緊並維持range bound，2026目標為65bps；TD則認為為在Labor Day前去化增加的dealer inventories並迎接9月發行高峰，Spread需要widening，6個月目標為95bps。（BofA、TD） 2. GS的季度Spread目標： GS對2026 Q3 USD IG的Spread目標為85bps，較其報告所載8月12日現值為寬。（GS） 2. 技術面 1. 供給與庫存壓力： BofA與TD均維持2026年US IG gross supply $2.1Tn展望，且均預期下週發行為$20 25Bn；TD估計過去兩週dealer inventories增加約$12Bn，認為庫存消化將是近期技術面的主要壓力。（BofA、TD） 3. 相對價值 1. 偏好BBB與較寬Spread部位： BofA偏好3 10yr belly的hybrids、BBBs及具較寬Spread的防禦性部位；GS亦維持USD IG BBB優於A與AA的相對價值偏好，理由是BBB carry較高且供給壓力較溫和。（BofA、GS） 4. 其他值得關注的議題 1. AI融資與基本面： BofA將M&A與AI融資供給列為US IG Spread的主要風險，並以2026及2027年每年約$200Bn USD hyperscaler supply作為分析假設；同時BofA與TD的2Q資料均顯示槓桿下降及獲利或coverage改善，提供基本面支持。（BofA、TD） 2. EU 1. 利差觀點 1. 低波動下的潛在widening： JPM指出EUR IG過去三個月交易區間僅5.3bps，市場尚未明顯反映美伊衝突與hyperscaler不確定性；GS對2026 Q3 EUR IG的Spread目標為91bps，較其報告所載8月12日現值為寬。（JPM、GS） 2. 技術面 1. 夏季清淡後供給重啟： JPM指出當週EUR IG僅有€2Bn發行且全數來自金融發行人，但預期9月至11月將有近€27Bn hyperscaler paper在euros發行；GS的2026年EUR IG gross issuance展望為€850Bn，均凸顯後續供給對技術面的重要性。（JPM、GS） 3. 相對價值 1. 品質配置偏向BBB： GS因歐元區成長較具韌性、且高品質AI相關供給可望加快，將EUR IG配置調整為BBB Overweight、A Neutral與AA Underweight。（GS） 2. 跨資產配置立場： GS將USD與EUR市場均調整為IG對HY Neutral，但在區域配置上仍小幅偏好USD credit優於EUR credit。（GS） 4. 其他值得關注的議題 1. 能源與地緣政治傳導風險： JPM認為只要能源價格維持有序，信用市場或可持續穿透地緣政治新聞，但美國戰略石油儲備、中國進口、海峽運輸受阻與歐洲天然氣壓力，均可能打破目前平靜的EUR信用市場。（JPM） 3. HY 1. 利差觀點 1. 風險報酬不對稱： BofA認為HY Spread接近週期低點時下行空間有限、risk off時的widening空間較大；GS的2026 Q3 Spread目標為USD HY 305bps及EUR HY 320bps，均較其報告所載8月12日現值為寬。（BofA、GS） 2. 技術面 1. 供給仍是關鍵變數： BofA的FY 2026e HY gross supply為$360Bn，GS的2026年gross issuance展望則為USD HY $400Bn及EUR HY €125Bn；JPM預期夏季後EUR市場的hyperscaler供給增加，也將測試整體信用市場的吸收能力。（BofA、GS、JPM） 3. 相對價值 1. 品質分化與HY bonds偏好： GS將USD HY配置調整為BB Neutral、B Overweight及CCC Underweight，EUR HY則維持BB Overweight、B Neutral及CCC Underweight，並偏好USD與EUR HY bonds勝於leveraged loans；BofA也指出現行HY指數的rating mix改善不代表低品質credit的落後現象消失。（BofA、GS） 4. 其他值得關注的議題 1. 貸款市場的結構性風險： GS認為leveraged loans對Software & Services曝險較高且品質結構較低，在風險趨避時較脆弱；BofA的USD Loans當週資料亦顯示需求低於新發行，投資人仍需留意貸款市場的供需與品質變化。（BofA、GS）",
+      "url": "weekly/2026-08-14/"
+    },
+    {
+      "date": "2026-08-07",
+      "text": "每週信用市場券商報告摘要及市場想法｜2026/08/07 本週重點 US IG： BofA維持下半年緩步tighten但區間震盪的看法，JPM與TD則指出超大規模雲端業者及9月初級市場供給，將限制近期進一步tighten並帶來季節性的wider壓力。（BofA、JPM、TD） EU： JPM認為EUR信用的評價偏貴且AI相關供給會限制tighten，GS則維持EUR IG與EUR HY的Q3 Spread預估，並偏好EUR IG相對EUR HY。（GS、JPM） HY： Barclays認為利差偏緊下較適合採區間震盪與因子配置，GS維持USD及EUR HY的Q3 Spread預估，BofA則偏好防禦性較佳的HY產業並提醒低品質貸款的覆蓋率風險。（Barclays、BofA、GS） 1. US IG 1. 利差觀點 1. 區間震盪與供給壓力： BofA預估2026年下半年US IG Spread將緩步tighten、但大致維持區間震盪，年末目標為65bps；JPM認為投資人將為9月初級市場預作準備，近期明顯tighten空間有限，TD則預期勞動節前最後1至2週可能出現wider壓力。（BofA、JPM、TD） 2. 技術面 1. 8月供給放緩但9月承接壓力在前： BofA預估8月10日當週US IG發行為$40至$50Bn、8月全月約$140Bn，TD預估下週約$50Bn；JPM認為即使名目發行偏高，扣除到期債與票息後的年末淨供給前景較正面。（BofA、JPM、TD） 3. 相對價值 1. 中段較寬信用與因子配置： BofA偏好3至10年期的hybrids、BBB、Life Insurance、Utilities及BB，並對Autos、Pipelines、Insurance、Utilities與Energy維持Overweight；Barclays在IG偏好carry與volatility，對spread duration及value維持中立。（Barclays、BofA） 4. 其他值得關注的議題 1. AI融資改變供給與利差結構： BofA估計4家排除MSFT的hyperscalers於2026至2027年的資金供給較最新共識現金燒錢高約$375Bn，JPM將2026年US IG總發行量展望上調至$2.0Tn，TD亦指出人工智慧相關融資已推升通訊業在發行中的比重。（BofA、JPM、TD） 2. EU 1. 利差觀點 1. 評價偏貴且供給限制tighten： JPM認為EUR IG在調整信評與到期結構後仍處於歷史偏高評價，且9月至11月預計€27Bn的超大規模雲端業者供給將限制Spread tighten；GS維持Q3 EUR IG及EUR HY Spread預估分別為91bps及320bps。（GS、JPM） 2. 技術面 1. 當週初級市場清淡並有基金流入： JPM指出本週EUR IG初級市場僅約€1Bn、EUR HY沒有新券，兩個市場基金均錄得流入；但後續AI相關供給增加，仍可能令EUR IG cash相對synthetic承壓。（GS、JPM） 3. 相對價值 1. 信評與市場配置偏防禦： GS偏好EUR IG相對EUR HY、A相對BBB及BB相對B，並Underweight CCC；JPM則認為歐元計價超大規模雲端業者債券相對歐洲優先非金融債基準具價值，但需留意未來供給。（GS、JPM） 4. 其他值得關注的議題 1. 地緣政治與指數結構： JPM指出中東衝突、能源供給與荷姆茲海峽重啟的不確定性仍是風險，且EUR IG基準的BBB比重下降、平均duration縮短至4.6年，使未經結構調整的歷史Spread比較容易失真。（JPM） 3. HY 1. 利差觀點 1. 偏緊評價下維持區間操作： Barclays認為IG與HY利差仍處歷史偏緊區間，近期較可能區間震盪；GS維持Q3 USD HY與EUR HY Spread預估分別為305bps及320bps。（Barclays、GS） 2. 技術面 1. fund flow支撐但資料中心供給是長期變數： BofA指出本週HY Spread收窄12bps至275bps、fund flow流入$2.3Bn；Barclays估計2026至2030年HY資料中心債券發行可達$273Bn，將逐步提高指數對該類信用風險溢酬的敏感度。（Barclays、BofA） 3. 相對價值 1. 偏好防禦性產業與較高品質： BofA對HY的Utilities、Technology及Travel/Leisure給予Overweight，並對Food Producers與Healthcare維持Underweight；GS偏好USD IG相對HY、BB相對B並Underweight CCC，Barclays則在HY偏好carry與volatility。（Barclays、BofA、GS） 4. 其他值得關注的議題 1. 低品質信用的覆蓋率與重組風險： BofA認為HY的潛在重組池升至3.7%，但私人CCC貸款的覆蓋率僅0.7倍、對利率與現金流情境最脆弱；Barclays亦提醒資料中心到2030年可能占HY指數逾11%，需持續評估其結構性影響。（Barclays、BofA）",
+      "url": "weekly/2026-08-07/"
+    },
+    {
+      "date": "2026-07-31",
+      "text": "每週信用市場券商報告摘要及市場想法｜2026/07/31 本週重點 US IG： 高all in yield、較短duration、強勁企業獲利與coupon再投資仍支撐需求；BNP認為只要升息幅度未明顯超越名目GDP成長，信用條件仍具韌性，但AI／hyperscaler供給與Labor Day後發行潮使券商對Spread方向分歧。 EU： EUR hyperscaler債券已明顯decompress，後續供給與TMT擁擠交易出清仍限制表現；不過高coupon cash flow與較低基準權重提供緩衝，配置上宜區分Sector與幣別，避免只依地區方向判斷。 HY： 整體技術面仍具韌性，但CCC與HY AI data center明顯落後；BNP偏好Single B與CCC相對BB，BofA則認為AI債已偏便宜，惟2H約$30Bn供給管線可能使壓力延續，應以分批布局及個別專案分析取代無差別增加beta。 1. US IG 1. 利差觀點 1. Carry環境仍具支撐但方向分歧： BofA維持2026年65bps target並預期2H緩步tighten，JPM認為高收益率短期有助Spread tighten，GS的Q3估計為85bps；相較之下，TD維持6個月95bps target，Barclays則建議以CDX.IG protection管理AI與總體風險。（Barclays、BofA、GS、JPM、TD） 2. 信用基本面尚未全面惡化： BofA估計AI題材僅解釋7月IG約4.9bps widening中的1.2bps；Barclays與TD均指出Q2 S&P 500獲利年增約26%，支持目前壓力主要來自供給、利率與相對價值重新定價。（Barclays、BofA、TD） 3. 高收益率對Spread的正面效果具有不確定性： JULI 30年期收益率升至6.23%，理論上可吸引保險公司及Taiwan等收益率買盤，但Iran風險、升息定價與總報酬波動可能削弱需求，JPM因此只維持近端偏正面看法。（JPM） 4. 升息是否傷害信用取決於成長環境： BNP以1970年代經驗指出，通膨或Fed升息本身未必導致Spread widen；若名目GDP維持強勁，三次升息仍不足以使信用條件轉為緊縮，真正風險是政策利率在成長放緩時快速上升。（BNP） 2. 技術面 1. 8月與Labor Day後供給仍偏重： BofA預估8月US IG供給$140Bn，TD估計$140–145Bn且下週為$50–55Bn；JPM提醒Labor Day後供給可能因發行人提前因應升息與選舉風險而放大。（BofA、JPM、TD） 2. AI供給壓力已由單一發行人擴散： Hyperscaler月內顯著落後IG，Barclays觀察排除hyperscaler後的AI ecosystem仍月內落後IG 19bps；BofA預期2H仍有約$62Bn IG AI adjacent供給，GS亦認為集中發行可能使Spread modestly wider。（Barclays、BofA、GS） 3. 需求為正但動能降溫： BofA、JPM與TD分別觀察IG fund flow約+$3.73Bn、+$3.281Bn及+$2.909Bn，均顯示流入仍在但較前期放緩；GS則指出資金主要集中於passive ETF及短中天期基金，長duration需求較弱。（BofA、GS、JPM、TD） 4. Coupon與到期再投資提供緩衝： GS估計coupon payments可吸收2026年USD IG與HY net supply逾50%；JPM預估下週再投資收入$32Bn，較8月平均高17%，可部分抵銷初級市場供給。（GS、JPM） 3. 相對價值 1. Hyperscaler已出現價值但需保留新券空間： BofA認為AI Spread已明顯cheap並偏好AI／hyperscalers相對Health Care與Food & Bev；JPM亦維持近端較正面立場，但提醒Labor Day後供給仍可能帶來更佳切入點。（BofA、JPM） 2. 長端curve存在issuer specific機會： Barclays指出BBB 10s30s curve比模型高約11bps，且30年期單A與BBB收益率約6.15%與6.61%，可尋找10s30s extension；JPM與TD則預期高長端收益率最終應帶動Spread curve flatten。（Barclays、JPM、TD） 3. 偏好US相對EUR但重視品質： TD建議US IG多頭相對EUR IG，認為美國已反映較多AI供給壓力；GS同樣偏好USD相對EUR，並在USD偏好IG相對HY、BBB相對更高信評。（GS、TD） 4. Financials相對優勢已偏stretch： JPM估計Financials相對Non Financials約tight 7bps，且2026年寬價新券後續表現不如過去幾年，顯示不能僅依初始Spread判斷價值。（JPM） 5. 偏好Autos的週期性與稀缺性： BNP維持US IG Autos Overweight，認為該產業相對IG的Spread在五年區間仍偏寬，供給占比下降、Q2財報改善與名目GDP上行風險可支持後續表現。（BNP） 4. 其他值得關注的議題 1. Fed與金融條件仍是雙面刃： Barclays認為通膨降溫讓Fed有等待空間，BofA則認為長端利率上升可抑制機會型發行並改善收益率需求；但JPM提醒利率若造成總報酬轉弱與outflow，5至10年期可能最受影響。（Barclays、BofA、JPM） 2. AI信用風險可能轉移至供應鏈： TD認為大型支出者愈來愈依賴供應商融資，可能把信用風險轉移至高品質晶片商；Barclays觀察semiconductors、hardware與data centers均已開始被重新定價。（Barclays、TD） 3. 事件風險未被指數充分反映： Barclays指出CDX.IG與排除AI群體的基差僅約2.5bps，在AI供給、Iran與高長端收益率並存下，CDX protection仍具不對稱避險價值。（Barclays） 4. 企業負債可受惠於高名目成長： BNP指出1970年代企業在高通膨與強勁名目GDP下仍能去槓桿，目前企業槓桿亦低於前次利率衝擊時，可在通膨或升息環境提供基本面緩衝。（BNP） 2. EU 1. 利差觀點 1. EUR hyperscaler明顯decompress： JPM指出7月6日以來EUR hyperscaler Spread widen 18bps至104bps，而EUR Senior Non Financials僅widen 3bps；目前估值改善，但後續新券Concession使次級市場缺乏快速tighten催化劑。（JPM） 2. TMT信用仍有補跌風險： Euro IG TMT當月widen 4bps、整體市場反而tighten 1bp；BofA認為相較美歐TMT momentum的歷史級跌幅，TMT credit尚未完全反映擁擠交易出清。（BofA） 3. 整體EUR Spread方向仍偏保守： GS維持Q3 EUR IG 91bps及EUR HY 320bps估計，並認為歐洲的成長、通膨與貨幣政策組合較美國不利，因此偏好USD相對EUR。（GS） 2. 技術面 1. EUR hyperscaler供給壓力下修但未消失： JPM將FY26歐元計價美國hyperscaler issuance target由€70Bn下修至€50Bn，但仍估計9月至11月有約€26.5Bn供給。（JPM） 2. Coupon cash flow支撐Euro IG： BofA估計Euro IG未來12個月coupon payments首度達€100Bn，其中Non Financials接近€60Bn，可在AI建設推動供給偏重時提供需求緩衝。（BofA） 3. Fund flow偏弱但仍為正： GS資料顯示EUR IG corporate fund年初至今流入0.4% AUM、EUR HY流入1.2% AUM；需求不強，但尚未轉為全面撤出。（GS） 4. Hyperscaler基準影響將逐年提高： JPM估計該群體目前僅占EUR IG基準1.2%，但持續融資下2030年可能升至7.9%，將逐步成為基準風險與集中度的重要來源。（JPM） 3. 相對價值 1. 短期偏好Consumer防禦、避開TMT擁擠風險： BofA認為Consumer equity positioning尚未出現同等出清，因此IG Consumer bonds較適合作為防禦配置，TMT／hyperscaler則仍有進一步widen風險。（BofA） 2. Sterling credit可能優於Euro credit： BoE按兵不動後英國金融條件改善，BofA認為這支持Sterling credit在8月相對Euro credit表現。（BofA） 3. 跨市場配置偏好USD： GS與TD均偏好US／USD相對EUR；GS理由是美國政策與成長組合較有利，TD則認為US IG已先反映AI供給，且歐洲對Middle East能源風險更敏感。（GS、TD） 4. 其他值得關注的議題 1. AI效益尚未廣泛擴散至歐洲企業： BofA指出科技企業margin改善，但非科技歐洲信用發行人margin大致持平，能源input prices仍快於output prices，持續壓抑獲利能力。（BofA） 2. 跨幣別發行將改變供給結構： Hyperscaler年初至今已發行約€23.5Bn歐元債、£5.5Bn英鎊債及CHF5.9Bn瑞郎債；JPM認為小幣別市場較易飽和，下半年歐元占比可能回升。（JPM） 3. 市場輪動並非全面risk off： BofA觀察金融、醫療、英國股市與等權重指數相對領先，認為7月主要是TMT等擁擠交易出清，而非信用市場全面基本面惡化。（BofA） 3. HY 1. 利差觀點 1. 整體Spread僅溫和widen但低品質明顯承壓： GS維持Q3 USD HY 305bps與EUR HY 320bps估計；TD觀察US HY為283bps，但CCC達815bps且月增71bps，顯示壓力集中於低品質尾端。（GS、TD） 2. AI data center成為HY新的壓力來源： Barclays指出2026年HY data center供給已超過$30Bn、約占HY發行16%，該Sector月內widen 125bps至330bps並拖累BB指數。（Barclays） 3. HY AI weakness主要是情緒與相對價值傳導： BofA觀察HY AI data center Spread由1個月前約185bps升至300bps，相對信評與duration調整後的ex AI HY premium擴大至110bps；但ex AI HY仍受穩健技術面支撐，尚未出現全面基本面惡化。（BofA） 2. 技術面 1. HY需求仍為正但弱於貸款： TD觀察HY流入約$847Mn、槓桿貸款流入$919Mn；GS則指出USD HY年初至今僅流入0.6% AUM，需求遠弱於USD IG與bank loan。（GS、TD） 2. 供給活躍但coupon可吸收部分net supply： GS估計2026年USD HY gross issuance為$400Bn、EUR HY為€125Bn，coupon payments可吸收USD IG與HY net supply逾50%、EUR IG與HY約40%。（GS） 3. AI供給管線限制短期修復： BofA預期2H仍有約$30Bn HY AI adjacent供給，且發行人不太可能因融資成本提高而停止投資；不過HY整體供給大致持平、當週fund flow轉為約+$0.1Bn，顯示壓力仍集中於AI群體。（BofA） 4. 較高carry與較短duration提高抗震能力： BNP指出US HY收益率約7.4%、duration約3年，即使收益率上升100bps，估計未來一年總報酬仍約4.5%，對利率衝擊的緩衝優於2022年。（BNP） 3. 相對價值 1. 配置仍偏向高品質HY： GS在USD HY偏好BB相對B並Underweight CCC，在EUR HY同樣偏好BB、Neutral B及Underweight CCC，反映carry尚可但尾端風險報酬不足。（GS） 2. 避免把data center供給視為一般BB beta： HY data center Spread已wide於BB且供給占比快速增加，Barclays的數據顯示投資人需分開評估AI融資風險，不能僅依指數信評配置。（Barclays） 3. AI債適合分批布局而非猜測底部： BofA認為HY與IG AI債依歷史premium已偏便宜，但供給overhang尚未消失；同一IG tenant支持的data center債仍會因施工、地區政策與交易結構呈現顯著分化。（BofA） 4. 低rating壓縮交易存在券商分歧： BNP在經濟維持強勁的情境下偏好Loans相對HY，並偏好Single B與CCC相對BB；此觀點與GS偏好BB、Underweight CCC不同，反映對信用週期與尾端風險的判斷差異。（BNP、GS） 4. 其他值得關注的議題 1. 品質曲線兩端分化擴大： TD指出CCC相對B wide 532bps，而高品質Industrial信用亦出現異常相對定價，顯示市場正在重新區分基本面、融資結構與供給風險。（TD） 2. AI風險已由IG向HY擴散： Barclays觀察hyperscaler、semiconductors、hardware與HY data centers同步落後；BofA進一步指出約75%的HY AI債屬於由IG tenant租約支撐的project financing，因此tenant債券重新定價會直接傳導至HY。（Barclays、BofA） 3. HY品質與事件風險持續分化： BofA指出distressed CCC當週下跌2.4%，但排除distressed名稱後的CCC相對BB與B抗跌；年初至今HY違約約$13.1Bn、平均回收率約33 cents，顯示壓力仍集中於特定弱勢發行人。（BofA） 4. 通膨的信用影響具有階段性： BNP認為通膨初期若伴隨強勁名目成長，企業實質負債下降可支撐信用；較大的尾端風險來自Fed在成長轉弱後加速升息，而非第一波通膨或首次升息。（BNP）",
+      "url": "weekly/2026-07-31/"
+    },
+    {
+      "date": "2026-07-24",
+      "text": "每週信用市場券商報告摘要及市場想法｜2026/07/24 本週重點 US IG： 券商對Spread方向分歧。BofA預期年內逐步tighten至65bps，GS的Q3估值為85bps，TD的6個月目標則為95bps；共同交集是hyperscaler與併購融資供給將壓抑長天期Spread，並使Spread curve偏陡。 EU： 較高收益率與有限second round effect仍支撐信用需求，但hyperscaler供給已使EUR相關債券重新定價；BBB供給稀缺支持估值，GS整體配置偏好USD相對EUR，ECB與能源風險仍需追蹤。 HY： HY供需大致平衡且技術面優於IG，BofA估計合理Spread為275–325bps；但CCC、LME與重複違約顯示低品質發行人壓力升高，GS已上調US與European HY違約率估計。 1. US IG 1. 利差觀點 1. Spread偏正面： 預期較高收益率、全球經濟韌性、穩健信用品質及下半年供給放緩，使US IG Spread在區間內逐步tighten，2026年目標為65bps。（BofA） 2. Spread居中： Q3 2026 USD IG Spread估計為85bps，並偏好USD相對EUR、IG相對HY及BBB相對更高信評群體。（GS） 3. Spread較保守： 報告日US IG Spread為78bps，6個月目標為95bps；25年以上債券當月Spread已widen 9bps，顯示back end壓力較大。（TD） 4. 預期小幅widen而非全面轉空： hyperscaler供給、Middle East油價及關稅消息形成壓力，但10年期美債收益率升至4.7%及Q2企業獲利年增約27%，可望限制大幅widen。（Barclays） 5. 市場呈現明顯分化： JPM指出JULI當週widen 2bps至93bps，其中hyperscaler widen 10bps至145bps，非hyperscaler僅widen 1bp至90bps，代表指數走弱主要由特定供給群體驅動。（JPM） 2. 技術面 1. 全年供給壓力偏高： Barclays將2026年IG總發行估計由$1.6Tn上修至$1.9Tn，淨發行約$970Bn；Technology與AI相關借款人占年初至今發行19%，並占10年以上發行38%，使新券平均duration明顯增加。（Barclays） 2. 短期供需仍有支撐，但財報後可能轉弱： JPM指出當週僅$11Bn新券，對應$31Bn到期與票息再投資收入，新券約1個月來首度重新跑贏；TD則估計企業離開財報靜默期後，下週供給將回升至$40–45Bn。（JPM、TD） 3. fund flow訊號分歧但整體動能降溫： Barclays統計截至7月22日當週IG ETF與共同基金合計流出$6.5Bn，結束連續11週流入；BofA與JPM的報告則仍顯示HG流入約$5.1–5.2Bn，但都低於前週。各報告的統計結果不宜直接合併，流入速度放緩則是較一致的訊號。（Barclays、BofA、JPM） 4. 長天期供給主導Spread curve： hyperscaler占2026年長天期發行26%，其10s30s Spread curve為43bps，排除hyperscaler後僅16bps；BofA亦指出即使30年期美債收益率上升，非金融債10s30s Spread curve仍持續變陡，顯示供給壓力已壓過收益需求。（JPM、BofA） 3. 相對價值 1. Hyperscaler與資料中心開始出現估值： hyperscaler提供相對其餘JULI市場61%的Spread pickup；IG資料中心債券收益率相對HY BB高80bps，RDMICH 2045收益率約8.15%，高於94%的BB債券。JPM認為估值可吸引crossover需求，但下一筆初級市場交易可能更便宜，仍是提前布局的主要阻力。（JPM） 2. 偏好中段、高Carry與相對較wide的Sector： 3至10年期偏好hybrid、BBB、Life Insurance、Utilities與BB；Sector偏好Autos、Pipelines、Insurance、Utilities與Energy，並減碼估值較tight且有再加槓桿或併購風險的Consumer Products與Health Care Sector。（BofA） 3. 曲線策略偏向長端防禦： TD主張布局更多bear flattening與公司債Spread curve steepener；BofA亦認為長天期供給技術面已壓過利率效果，因此相對價值應避免過度承擔back end供給風險。（TD、BofA） 4. 地區間偏好US IG： BofA認為European Yankee相對美國發行人已compress，且Europe對Iran戰事的油氣曝險較高，因此建議由European Yankee轉向美國發行人；GS亦偏好USD相對EUR。（BofA、GS） 4. 其他值得關注的議題 1. 地緣政治與油價： TD研究1985年以來14次風險事件，US IG Spread平均最大widen約4.4%，通常在38–42個交易日內收復；BofA則指出Brent接近$100時，7月US IG僅widen約5bps，且排除AI、Telecom與Technology Sector後僅widen 2bps，顯示目前Spread對Iran風險反應仍有限。（TD、BofA） 2. Fed重新定價： 市場給予下次FOMC升息約33%的機率；TD認為市場計入2026年近2次升息只是下限，Middle East情勢與油價將是會前的重要變數。（TD） 3. 退休金長端需求可能低於原先期待： 過去1年Pension Risk Transfer僅$27.22Bn，占約$3.1Tn私人確定給付計畫資產不到1%；TD認為大規模股票轉入公司債的需求可能不會出現，使10至20年期公司債Spread面臨額外壓力。（TD） 4. 信用市場交易結構改變： JPM指出，HG信用工具Q1–Q2 2026日均交易量達$163.4Bn，CDX及相關工具占61%；Credit ETF亦逐漸承擔價格發現、portfolio trading與風險移轉功能，但交易仍集中於大型券種與少數ETF。（JPM、Barclays） 2. EU 1. 利差觀點 1. Hyperscaler供給使EUR Credit重新定價： 全球hyperscaler債務餘額由2025年1月$210Bn增至$460Bn，EUR hyperscaler Spread已首次wide於整體EUR IG；若下一輪財報capex再度高於預期且沒有股權融資，BofA預期相關Spread將續widen。（BofA） 2. 對EU維持較保守看法： Q3 2026 EUR IG與EUR HY Spread估計分別為91bps與320bps；地區配置偏好USD相對EUR，並在EUR偏好IG相對HY、A相對BBB及BB相對更低信評HY。（GS） 3. 油價衝擊尚未直接轉化為Spread壓力： 油價在新一輪US Iran衝突12天內上漲40%，但EUR Credit Spread幾乎不變；BofA認為較高收益率與較低利率波動仍支撐需求，真正風險是工資等second round effect推升ECB terminal rate。（BofA） 2. 技術面 1. EUR與GBP hyperscaler供給已具指數影響力： 2026年初至今hyperscaler在EUR IG發行€24Bn、GBP IG發行£5.5Bn，並占EUR IG 10年以上區段7.8%及該區段年初至今發行11%；EUR與USD避險後融資成本接近，可能提高後續EUR發行誘因。（Barclays） 2. BBB稀缺提供技術面支撐： EUR Credit Markets預計2026年成長近€200Bn，但BBB債務年初至今反而萎縮，為2005年以來首次；過去1年約€300Bn EUR IG債務獲調升，其中近60%來自BBB，使BBB可投資規模受到壓縮。（BofA） 3. 收益率仍支撐需求，但利率敏感資產已轉弱： 10年期美債實質收益率當月升20bps、Gilt升15bps，促使擁擠部位反轉；European IG AT1與B債券仍tighten，但房地產等利率敏感債券轉弱。（BofA） 3. 相對價值 1. 以barbell取代昂貴BBB： BBB相對A的Spread ratio位於歷史第9百分位，估值明顯compress；BofA指出20% BB加80% A的barbell組合自2021年以來歷史報酬高於BBB，並保留較高品質及部分compression空間。（BofA） 2. EUR Technology相對USD的優勢主要來自較低供給： EUR Technology Sector自2025年10月以來仍較整體指數tight 1.5bps，USD Technology則已轉為wide 8bps；同期EUR供給僅年增1.5%，USD供給年增36%。JPM認為實際發債量比發行人集中度或ESG信評更能解釋差異。（JPM） 3. 相對價值需區分總體地區配置與Sector供給： GS整體偏好USD相對EUR，但JPM的跨市場資料顯示EUR Technology因供給較少而相對抗跌；因此EU配置不宜只依地區方向，仍需檢視個別Sector的實際供給。（GS、JPM） 4. 其他值得關注的議題 1. ECB政策路徑： BofA經濟學家預期9月再升息，但後續升息次數有限；2027年可能轉為降息，年底利率回到或低於2%。若second round effect保持有限，單次升息本身不致破壞信用需求。（BofA） 2. AI支出的受益者與融資者可能分化： hyperscaler因融資供給而承壓，但Utilities與Industrials等AI enabler可能受惠於capex增加；若capex下修，兩者的相對方向可能反轉。（BofA） 3. 高beta領導結構改變： EUR IG近5年總報酬由Autos Sector領先，HY由B而非CCC領先，高beta信用的領導者則由AT1轉向B，顯示信用市場內部輪動比大盤Spread更明顯。（BofA） 3. HY 1. 利差觀點 1. 基礎情境偏正面： 假設Iran情勢降溫且Fed未來12個月升息1次，HY合理Spread區間為275–325bps；在2%違約率與40%回收率下，12個月總報酬估計為5.9%。（BofA） 2. 低品質尾端風險升高： Q3 USD與EUR HY Spread估計分別為305bps與320bps；GS將2026年底US HY違約率上調至4%、European HY上調至5%，但仍將壓力解讀為集中於最弱發行人，而非全面信用惡化。（GS） 3. 指數表面穩定但內部分化顯著： HY Spread仍接近近12個月tight水準，BofA資料為268bps，但CCC當週widen 12bps；GS則指出USD與EUR CCC年初至今分別widen 173bps與141bps，BB與B仍接近歷史tight端。（BofA、GS） 2. 技術面 1. HY供需大致平衡、貸款技術面更強： HY年初至今供給略快於需求，但需求減供給仍接近0；貸款供給下降速度快於需求，使貸款技術面改善。BofA預期LevFin AI相關融資主要排擠M&A與LBO供給，而非完全新增。（BofA） 2. 新券仍需價格讓步： 當週HY發行$5.0Bn、7月至今$12.8Bn，其中再融資占62%；新券指數當月總報酬落後整體市場45bps，反映市場仍要求Concession。（BofA） 3. 下半年供給較集中： Barclays估計2026年HY總供給為$370–390Bn，其中約56%集中於下半年；槓桿貸款供給則下修至$425–445Bn。（Barclays） 4. fund flow顯示資金偏向貸款： JPM統計HY當週僅流入$47Mn，槓桿貸款流入升至$646Mn；TD的資料亦顯示HY流入僅$68Mn、槓桿貸款由$459Mn增至$646Mn。（JPM、TD） 3. 相對價值 1. 以HY作為LevFin核心配置： 相較貸款與Private Credit，HY具較佳信評結構、較低AI曝險及較穩定總報酬；貸款Spread可能由480bps widen至520bps，Private Credit則面臨較高信用損失與流動性風險。（BofA） 2. 相對配置更重視品質： USD偏好IG相對HY、BBB相對更高信評，惟在LevFin內偏好HY債券相對槓桿貸款；EUR則偏好IG相對HY、BB相對更低信評HY。（GS） 3. Secured標籤不等於較高發行人品質： US HY secured債占比已升至37%，但其中50.6%為B；若以同一發行人資本結構內最低信評調整，BB占比會下降約500bps。較高回收率可降低損失，但投資人仍需分開評估security順位與發行人品質。（Barclays） 4. 其他值得關注的議題 1. LME與重複違約延長信用循環： 2026年初至今LME、distressed exchange與庭外重組占US HY違約約70%、European HY約50%；重複違約占US HY約27%、European HY約20%。首次LME雖可能降低當期haircut，但未必完成去槓桿，第二次重組損失通常更大。（GS） 2. AI資料中心融資將擴散至HY與ABS： 多數受訪者預期HY AI資料中心債券至2026年底累計發行超過$75Bn，2027年另增至少$50Bn；72%認為至少一半現有債券最終可轉入IG、ABS或其他資本市場。tenant信用品質及GPU經濟壽命是主要定價風險。（BofA） 3. European HY再融資壓力較集中： European HY有16%的債券在2027至2028年到期，高於USD HY的9%；雖然其中BB占比較高，但CCC目前收益率相對舊券票息的差距，仍意味再融資後利息費用可能大幅增加。（GS） 4. Private Credit壓力尚未失序但需持續追蹤： Q1 2026 Private Credit covenant default率降至3.1%，接近5年平均3.2%；新增non accrual與amended PIK的合併壓力率雖上升，但幅度尚不異常。（GS）",
+      "url": "weekly/2026-07-24/"
+    }
+  ],
+  "forecast": {
+    "text": "IB Forecast Tracker US IG 券商 Call 日期 Spread Gross Supply Overweight Sector Underweight Sector Hyperscaler issuance 最新／延續說明 Barclays 2026 08 21 range bound（near term，Carried，自 2026 08 07） $1.9Tn（2026，Carried，自 2026 07 24） — Technology（Carried，自 2026 07 17） Additional Microsoft and Meta issuance; potential Amazon issuance（H2 2026，Carried，自 2026 08 07） 8/21更新US IG coverage；既有有效calls延續。 BofA 2026 08 14 65bps（2026） $2.1Tn（2026）；$20 $25Bn（2026 08 17） Autos、Energy、Insurance、Pipelines、Utilities Consumer Products、Food, Bev, & Bottling、Health Care $200Bn per year（2026 2027）；less issuance（2H 2026；Carried，自 2026 08 07） 8/14重申 Spread、全年發行與主要 sector views，並更新下一週發行量與 hyperscaler 假設。 BNP 2026 07 31 — — Autos — — 最新有效 house call 為 Autos Overweight。 GS 2026 08 20 85bps（2026 Q3）；82bps（2026 Q4）；80bps（2027 Q1）；78bps（2027 Q2） $2.1Tn（2026） — — — 8/20更新Q3至2027 Q2 Spread路徑與全年gross supply。 JPM 2026 08 21 95bps（2026）；BBB A decompress/wider（2026 09） $2.0Tn（2026，Carried，自 2026 08 07） Tobacco、Finance Companies、Metals/Mining、Aerospace/Defense、US Banks、Large US Banks Sen HoldCos、Yankee Banks、UK Holdco、Australian/NZ Banks、Euro Senior、Euro Sen Non Pref、Japanese Banks、Healthcare Pharmaceuticals、Large Cap Pharma、Healthcare Services Consumer、Food/Beverages、Consumer Products、Energy Services、Yankee Telecoms、Automotive、Automotive Manufacturing、Automotive Suppliers、Automotive Finance Companies、Chemicals、Media Entertainment、Cable/Satellite、Diversified Media、Canadian Banks、Retail、Non Food Retail、Food/Drug Retail $50Bn（2026年末前，Carried，自 2026 08 07） 8/21更新Spread、BBB A相對價值及sector recommendations；全年供給與hyperscaler estimate延續。 TD 2026 08 21 95bps（6M）；90 100bps（2026 09） $2.2Tn（2026）；$245 255Bn（2026 09）；$140 150Bn（2026 Labor Day後前兩週） — — — 8/21上調全年供給並新增9月及Labor Day後前兩週供給預估；95bps為6M house target。 US HY 券商 Call 日期 Spread Gross Supply Overweight Sector Underweight Sector Hyperscaler issuance 最新／延續說明 Barclays 2026 08 21 range bound（near term，Carried，自 2026 08 07） $370–390Bn（2026，Carried，自 2026 07 24）；$273Bn data center bond issuance（2026 2030，Carried，自 2026 08 07） Leisure、Other Financial、Pharmaceuticals、Refining、Retailers、Technology（均 Carried，自 2026 07 17） Chemicals、Food and Beverage、Gaming、Other REITs、Supermarkets、Transportation、Wireless（均 Carried，自 2026 07 17） — 8/21更新US HY coverage；既有有效calls延續。 BofA 2026 08 20 — $360Bn（2026，Carried，自 2026 08 13） Technology、Travel/Leisure、Utilities（均 Carried，自 2026 08 06） Food Producers、Healthcare（均 Carried，自 2026 08 06） 約$30Bn（2H 2026，Carried，自 2026 07 30） 8/20有US HY coverage，未撤回既有全年供給、sector及hyperscaler觀點。 BNP 2026 07 31 — — — — — 有 US HY coverage，無有效 house call。 GS 2026 08 20 305bps（2026 Q3）；295bps（2026 Q4）；290bps（2027 Q1）；280bps（2027 Q2） $400Bn（2026） — — — 8/20更新Q3至2027 Q2 Spread路徑與全年gross supply。 JPM 2026 08 21 — — — — — 有US HY coverage，無有效 house call。 TD 2026 08 21 — — — — — 有US HY coverage，無有效 house call。 EUR 券商 Call 日期 資產 Spread Gross Supply Overweight Sector Underweight Sector Hyperscaler issuance 最新／延續說明 GS 2026 08 20 EUR IG 91bps（2026 Q3）；88bps（2026 Q4）；86bps（2027 Q1）；84bps（2027 Q2） €850Bn（2026） — — — 8/20更新Q3至2027 Q2 Spread路徑與全年gross supply。 GS 2026 08 20 EUR HY 320bps（2026 Q3）；315bps（2026 Q4）；310bps（2027 Q1）；305bps（2027 Q2） €125Bn（2026） — — — 8/20更新Q3至2027 Q2 Spread路徑與全年gross supply。 BofA 2026 08 21 EUR IG — — — — — 有EUR IG coverage，無有效 house call。 JPM 2026 08 21 EUR IG 90bps（2026） €730Bn（2026） Industrials Consumer €27Bn（2026 Sep Nov，Carried，自 2026 08 14）；€50Bn（2026，Carried，自 2026 07 31） 8/21更新2026 Spread、gross supply與Industrials vs Consumer；hyperscaler calls延續。 JPM 2026 08 21 EUR HY 300bps（2026） €140Bn（2026） — — — 8/21更新2026 Spread與gross supply。 TD 2026 08 07 EUR IG — — — — — 有 EUR IG coverage，無有效 house call。",
+    "url": "forecast/"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "WebsiteTitle": "券商報告知識庫",
+  "BaseUrl": "https://larry890122.github.io/ib-knowledge-base/",
+  "SourceRoot": "../Processed",
+  "OutputDir": "public",
+  "IncludeForecast": true,
+  "Visibility": "public-sanitized"
+}
