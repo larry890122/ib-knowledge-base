@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import sys
 import unittest
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -9,6 +10,9 @@ from urllib.parse import unquote, urlsplit
 
 SITE_DIR = Path(__file__).resolve().parents[1]
 PUBLIC_DIR = SITE_DIR / "public"
+SOURCE_DIR = SITE_DIR.parent / "Processed"
+sys.path.insert(0, str(SITE_DIR))
+import publish
 FORBIDDEN = (
     "source.txt",
     "source_file",
@@ -49,9 +53,29 @@ class GeneratedSiteTests(unittest.TestCase):
             self.assertIn(label, self.home)
         self.assertIn("查看歷史 Weekly", self.home)
         self.assertIn("完整 Forecast Tracker", self.home)
-        self.assertIn('class="call-list"', self.home)
+        self.assertIn('class="views-table"', self.home)
+        self.assertIn("Hyperscaler Issuance", self.home)
+        self.assertIn("最新／延續說明", self.home)
+        self.assertIn('class="intro-hero"', self.home)
+        self.assertIn('class="weekly-full-detail"', self.home)
+        self.assertNotIn('<details class="weekly-full-detail" open', self.home)
         self.assertIn('class="call-field-details"', self.home)
+        self.assertNotIn('class="call-list"', self.home)
         self.assertNotIn('class="call-grid"', self.home)
+
+    def test_report_pages_include_all_topic_bullets(self) -> None:
+        reports, _, _, _ = publish.load_content(SOURCE_DIR)
+        self.assertEqual(len(reports), self.manifest["report_count"])
+        for report in reports:
+            page = (PUBLIC_DIR / "reports" / report["slug"] / "index.html").read_text(encoding="utf-8")
+            self.assertIn("<h2>重點摘要</h2>", page)
+            self.assertIn("<h2>主題整理</h2>", page)
+            topic_section = page.split("<h2>主題整理</h2>", 1)[1].split("</section>", 1)[0]
+            expected_bullets = len(re.findall(r"(?m)^\s*[-*+]\s+", report["topics"]))
+            expected_headings = len(re.findall(r"(?m)^###\s+", report["topics"]))
+            self.assertGreater(expected_bullets, 0, report["slug"])
+            self.assertEqual(topic_section.count("<li>"), expected_bullets, report["slug"])
+            self.assertEqual(topic_section.count("<h3>"), expected_headings, report["slug"])
 
     def test_search_index_contains_only_public_fields(self) -> None:
         self.assertEqual(len(self.search["reports"]), self.manifest["report_count"])

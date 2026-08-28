@@ -258,40 +258,31 @@ def parse_calls(markdown: str) -> dict[str, list[dict[str, str]]]:
     return groups
 
 
-def call_card(record: dict[str, str]) -> str:
-    fields = (
-        ("Spread", record.get("Spread", "—")),
-        ("Gross Supply", record.get("Gross Supply", "—")),
-        ("Overweight", record.get("Overweight Sector", "—")),
-        ("Underweight", record.get("Underweight Sector", "—")),
-        ("Hyperscaler", record.get("Hyperscaler issuance", "—")),
-    )
-    def render_field(label: str, value: str) -> str:
+def call_table_row(record: dict[str, str]) -> str:
+    def render_cell(value: str) -> str:
         if len(plain_text(value)) > 76:
             preview = plain_text(value)[:68].rstrip("、；， ") + "…"
-            content = (
+            return (
                 f'<details class="call-field-details"><summary>{html.escape(preview)}</summary>'
                 f'<div class="call-field-full">{render_inline(value)}</div></details>'
             )
-        else:
-            content = render_inline(value)
-        return f"<div><dt>{html.escape(label)}</dt><dd>{content}</dd></div>"
+        return render_inline(value)
 
-    details = "".join(
-        render_field(label, value)
-        for label, value in fields
-        if value.strip() not in {"", "—"}
+    values = (
+        record.get("Spread", "—"),
+        record.get("Gross Supply", "—"),
+        record.get("Overweight Sector", "—"),
+        record.get("Underweight Sector", "—"),
+        record.get("Hyperscaler issuance", "—"),
+        record.get("最新／延續說明", "—"),
     )
-    note = record.get("最新／延續說明", "")
+    cells = "".join(f"<td>{render_cell(value)}</td>" for value in values)
     return f"""
-      <article class="call-card">
-        <div class="call-card-top">
-          <h3>{html.escape(record.get('券商', ''))}</h3><span class="status-pill">{html.escape(record['Status'])}</span>
-          <span class="call-date">{html.escape(record.get('Call 日期', ''))}</span>
-        </div>
-        <div class="call-content"><dl class="call-fields">{details}</dl>
-        {f'<p class="call-note">{render_inline(note)}</p>' if note else ''}</div>
-      </article>"""
+      <tr>
+        <th scope="row">{html.escape(record.get('券商', ''))}</th>
+        <td class="call-status-cell"><time datetime="{html.escape(record.get('Call 日期', ''), quote=True)}">{html.escape(record.get('Call 日期', ''))}</time><span class="status-pill">{html.escape(record['Status'])}</span></td>
+        {cells}
+      </tr>"""
 
 
 def page_shell(
@@ -334,11 +325,11 @@ def page_shell(
   <a class="skip-link" href="#main-content">跳到主要內容</a>
   <header class="site-header">
     <div class="nav-shell">
-      <a class="brand" href="{prefix}index.html"><span class="brand-mark">IB</span><span>{html.escape(site_title)}</span></a>
+      <a class="brand" href="{prefix}index.html">{html.escape(site_title)}</a>
       <nav class="site-nav" aria-label="主要導覽">
-        <a href="{prefix}index.html#weekly">Weekly</a>
-        <a href="{prefix}index.html#calls">Calls</a>
-        <a href="{prefix}index.html#reports">報告庫</a>
+        <a href="{prefix}index.html#weekly">Weekly Summary</a>
+        <a href="{prefix}index.html#calls">券商觀點</a>
+        <a href="{prefix}index.html#reports">報告知識庫</a>
       </nav>
     </div>
   </header>
@@ -365,7 +356,11 @@ def load_content(source_root: Path) -> tuple[list[dict], list[dict], str, dict[s
             raise ValueError(f"{relative} 缺少欄位：{', '.join(sorted(missing))}")
         if relative not in coverage:
             raise ValueError(f"{relative} 缺少 asset coverage")
-        summary = extract_section(remove_source_section(body), "重點摘要")
+        public_body = remove_source_section(body)
+        summary = extract_section(public_body, "重點摘要")
+        topics = extract_section(public_body, "主題整理")
+        if not topics:
+            raise ValueError(f"{relative} 缺少主題整理")
         slug = slugify(frontmatter["broker"], frontmatter["report_title"], frontmatter["report_date"])
         if slug in seen_slugs:
             raise ValueError(f"報告網址重複：{slug}")
@@ -378,6 +373,7 @@ def load_content(source_root: Path) -> tuple[list[dict], list[dict], str, dict[s
                 "assets": coverage[relative],
                 "summary": summary,
                 "summary_text": plain_text(summary),
+                "topics": topics,
                 "slug": slug,
             }
         )
@@ -409,16 +405,14 @@ def load_content(source_root: Path) -> tuple[list[dict], list[dict], str, dict[s
 
 def build_home(config: dict, reports: list[dict], weekly: list[dict], calls: dict[str, list[dict[str, str]]], output: Path) -> None:
     latest = weekly[0]
-    details = "".join(
-        f"<details><summary>{html.escape(market)}</summary><div class=\"weekly-detail-body\">{render_markdown(latest['sections'][market])}</div></details>"
-        for market in ("US IG", "EU", "HY")
-    )
+    updated_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M %z")
+    weekly_full = render_markdown(latest["markdown"])
     tabs = "".join(
         f'<button type="button" role="tab" id="tab-{slugify(asset)}" aria-controls="panel-{slugify(asset)}" aria-selected="{str(index == 0).lower()}" tabindex="{0 if index == 0 else -1}">{html.escape(asset)}</button>'
         for index, asset in enumerate(("US IG", "US HY", "EUR IG", "EUR HY"))
     )
     panels = "".join(
-        f'<div class="call-panel" role="tabpanel" id="panel-{slugify(asset)}" aria-labelledby="tab-{slugify(asset)}"{ "" if index == 0 else " hidden"}><div class="call-list">{"".join(call_card(item) for item in calls[asset])}</div></div>'
+        f'<div class="call-panel" role="tabpanel" id="panel-{slugify(asset)}" aria-labelledby="tab-{slugify(asset)}"{ "" if index == 0 else " hidden"}><div class="table-wrap calls-table-wrap"><table class="views-table"><caption class="sr-only">{html.escape(asset)} 券商 Calls 比較表</caption><thead><tr><th>券商</th><th>Call 日期</th><th>Spread</th><th>Gross Supply</th><th>Overweight</th><th>Underweight</th><th>Hyperscaler Issuance</th><th>最新／延續說明</th></tr></thead><tbody>{"".join(call_table_row(item) for item in calls[asset])}</tbody></table></div></div>'
         for index, asset in enumerate(("US IG", "US HY", "EUR IG", "EUR HY"))
     )
     brokers = sorted({item["broker"] for item in reports})
@@ -438,13 +432,18 @@ def build_home(config: dict, reports: list[dict], weekly: list[dict], calls: dic
           </article>""")
     body = f"""
   <main id="main-content" class="page-shell">
-    <section id="weekly" class="weekly-hero">
-      <span class="eyebrow">Latest weekly summary</span>
-      <h1 class="weekly-title">每週信用市場摘要</h1>
-      <p class="weekly-meta">截至 {latest['date']}｜整合本週券商觀點</p>
-      <div class="weekly-points">{render_markdown(latest['key'])}</div>
-      <div class="weekly-details">{details}</div>
-      <div class="weekly-actions"><a class="button button-light" href="weekly/{latest['date']}/index.html">閱讀完整本週摘要</a><a class="button button-ghost" href="weekly/index.html">查看歷史 Weekly</a></div>
+    <section class="intro-hero" aria-labelledby="site-intro-title">
+      <span class="eyebrow">Broker Research Knowledge Base</span>
+      <h1 id="site-intro-title">信用市場券商觀點，一頁掌握。</h1>
+      <p class="intro-copy">彙整已驗證的券商報告、最新 Weekly Summary 與 house call，快速掌握市場方向與相對價值。</p>
+      <p class="update-time">本次網站更新：{updated_at}｜報告 {len(reports)} 份｜Weekly {len(weekly)} 期</p>
+    </section>
+
+    <section id="weekly" class="section weekly-section">
+      <div class="section-heading"><div><span class="eyebrow">Latest Weekly Summary</span><h2>本週市場重點</h2><p>截至 {latest['date']}｜整合本週券商觀點</p></div><a class="text-link" href="weekly/{latest['date']}/index.html">閱讀完整週報 →</a></div>
+      <div class="weekly-highlights">{render_markdown(latest['key'])}</div>
+      <details class="weekly-full-detail"><summary>展開完整 Weekly Summary</summary><div class="weekly-full-body">{weekly_full}</div></details>
+      <div class="weekly-actions"><a class="button" href="weekly/{latest['date']}/index.html">閱讀完整本週摘要</a><a class="button button-ghost" href="weekly/index.html">查看歷史 Weekly</a></div>
     </section>
 
     <section id="calls" class="section">
@@ -453,7 +452,7 @@ def build_home(config: dict, reports: list[dict], weekly: list[dict], calls: dic
     </section>
 
     <section id="reports" class="section">
-      <div class="section-heading"><div><span class="eyebrow">Research library</span><h2>個別券商報告</h2><p>搜尋已整理的公開重點摘要；完整主題整理與來源檔案不對外發布。</p></div></div>
+      <div class="section-heading"><div><span class="eyebrow">Research library</span><h2>個別券商報告</h2><p>搜尋已整理的公開重點摘要；完整主題整理可於報告頁閱讀，來源檔案不對外發布。</p></div></div>
       <div class="filters" aria-label="報告篩選器">
         <div class="field field-search"><label for="report-search">關鍵字</label><input id="report-search" type="search" placeholder="搜尋券商、標題或摘要"></div>
         <div class="field"><label for="broker-filter">券商</label><select id="broker-filter"><option value="">全部券商</option>{broker_options}</select></div>
@@ -487,7 +486,7 @@ def build_secondary_pages(config: dict, reports: list[dict], weekly: list[dict],
   <main id="main-content" class="page-shell article-shell">
     <a class="card-link" href="../../index.html#reports">← 返回報告庫</a>
     <header class="article-header"><span class="eyebrow">{html.escape(item['broker'])} research</span><h1>{html.escape(item['title'])}</h1><div class="article-meta"><time datetime="{item['date']}">{item['date']}</time>{tags}</div></header>
-    <article class="prose"><h2>重點摘要</h2>{render_markdown(item['summary'])}</article>
+    <article class="prose report-prose"><section class="report-summary"><h2>重點摘要</h2>{render_markdown(item['summary'])}</section><section class="report-topics"><h2>主題整理</h2>{render_markdown(item['topics'])}</section></article>
   </main>"""
         page = page_shell(
             config,

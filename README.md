@@ -1,6 +1,6 @@
 # 券商報告知識庫網站
 
-本目錄是獨立的公開網站 repository。網站只從上層 `Processed` 產生經過清理的公開內容，不上傳原始 Markdown、PDF、Excel、來源檔名、雜湊或處理紀錄。
+本目錄是獨立的公開網站 repository。網站只從上層 `Processed` 產生經過清理的公開內容；個別報告頁公開「重點摘要」與「主題整理」，但不上傳原始 Markdown、PDF、Excel、來源檔名、雜湊或處理紀錄。
 
 ## 建置
 
