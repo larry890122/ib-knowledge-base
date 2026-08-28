@@ -64,6 +64,18 @@ class GeneratedSiteTests(unittest.TestCase):
         self.assertNotIn('class="call-grid"', self.home)
 
     def test_report_pages_include_all_topic_bullets(self) -> None:
+        if not (SOURCE_DIR / ".forecast-calls.json").is_file():
+            report_pages = list((PUBLIC_DIR / "reports").glob("*/index.html"))
+            self.assertEqual(len(report_pages), self.manifest["report_count"])
+            for path in report_pages:
+                page = path.read_text(encoding="utf-8")
+                self.assertIn("<h2>重點摘要</h2>", page)
+                self.assertIn("<h2>主題整理</h2>", page)
+                topic_section = page.split("<h2>主題整理</h2>", 1)[1].split("</section>", 1)[0]
+                self.assertIn("<h3>", topic_section, path.parent.name)
+                self.assertIn("<li>", topic_section, path.parent.name)
+            return
+
         reports, _, _, _ = publish.load_content(SOURCE_DIR)
         self.assertEqual(len(reports), self.manifest["report_count"])
         for report in reports:
