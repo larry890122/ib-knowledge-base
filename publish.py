@@ -69,6 +69,16 @@ def remove_source_section(markdown: str) -> str:
     return re.split(r"(?m)^##\s+來源PDF\s*$", markdown, maxsplit=1)[0].rstrip()
 
 
+def sanitize_tracker_markdown(markdown: str) -> str:
+    """Keep Tracker meaning while removing internal source-storage wording."""
+    return re.sub(
+        r"舊sector與hyperscaler calls來源PDF未在To\s*Text",
+        "舊sector與hyperscaler calls來源缺失",
+        markdown,
+        flags=re.IGNORECASE,
+    )
+
+
 def extract_section(markdown: str, title: str) -> str:
     pattern = rf"(?ms)^##\s+{re.escape(title)}\s*$\n(.*?)(?=^##\s+|\Z)"
     match = re.search(pattern, markdown)
@@ -394,6 +404,7 @@ def load_content(source_root: Path) -> tuple[list[dict], list[dict], str, dict[s
         raise ValueError("找不到 Weekly Summary")
 
     tracker_markdown = remove_source_section((source_root / "IB Forecast Tracker.MD").read_text(encoding="utf-8"))
+    tracker_markdown = sanitize_tracker_markdown(tracker_markdown)
     tracker_markdown = "\n".join(
         line
         for line in tracker_markdown.splitlines()
