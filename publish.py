@@ -15,6 +15,7 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
+from rv_data import validate as validate_rv
 
 
 SITE_DIR = Path(__file__).resolve().parent
@@ -527,6 +528,7 @@ def page_shell(
         <a href="{prefix}index.html#weekly">Weekly Summary</a>
         <a href="{prefix}index.html#calls">券商觀點</a>
         <a href="{prefix}index.html#reports">報告知識庫</a>
+        <a href="{prefix}rv/">RV 相對價值</a>
       </nav>
     </div>
   </header>
@@ -752,7 +754,7 @@ def hash_public(output: Path) -> str:
 
 
 def validate_public(output: Path, expected_reports: int, expected_weekly: int) -> None:
-    required = [output / "index.html", output / "forecast" / "index.html", output / "weekly" / "index.html", output / "search-index.json"]
+    required = [output / "index.html", output / "forecast" / "index.html", output / "weekly" / "index.html", output / "search-index.json", output / "rv/index.html", output / "assets/rv-data.json", output / "assets/rv.css", output / "assets/rv.js"]
     for path in required:
         if not path.is_file():
             raise ValueError(f"缺少網站輸出：{path.relative_to(output)}")
@@ -772,6 +774,28 @@ def validate_public(output: Path, expected_reports: int, expected_weekly: int) -
             for term in FORBIDDEN_PUBLIC_TERMS:
                 if term in lower:
                     raise ValueError(f"公開輸出含禁止資訊 {term!r}：{path.relative_to(output)}")
+
+
+def build_rv(config: dict, output: Path) -> None:
+    snapshot = json.loads((SITE_DIR / 'assets/rv-data.json').read_text(encoding='utf-8'))
+    validate_rv(snapshot)
+    for name in ('rv.css', 'rv.js', 'rv-data.json'):
+        shutil.copy2(SITE_DIR / 'assets' / name, output / 'assets' / name)
+    controls = ''.join(f'<label><input type="radio" name="section" value="{s}" {"checked" if s == "Overview" else ""}><span>{s}</span></label>' for s in snapshot['sections'])
+    metrics = ''.join(f'<label><input type="checkbox" name="metric" value="{m}" {"checked" if m == "Spread" else ""}><span>{m}</span></label>' for m in ('Spread','10Y','30Y','10s30s'))
+    body = f'''<link rel="stylesheet" href="../assets/rv.css">
+<main id="main-content" class="rv-shell">
+  <div class="rv-heading"><div><p class="rv-kicker">INVESTMENT GRADE / RELATIVE VALUE</p><h1>RV 相對價值</h1></div><p class="rv-date">資料日期 <time datetime="{snapshot['date']}">{snapshot['date'].replace('-', '/')}</time><br><strong>2Y Horizon</strong> · 歷史快照，非即時行情</p></div>
+  <div class="rv-controls"><fieldset><legend>產業分類</legend><div class="rv-options">{controls}</div></fieldset><fieldset><legend>比較指標 <small>可複選</small></legend><div class="rv-options">{metrics}</div></fieldset></div>
+  <div class="rv-guide"><span><i class="range-key"></i>2Y Min–Max</span><span><i class="median-key"></i>中位數</span><span><i class="current-key"></i>目前值</span><span><i class="pct-key"></i>Percentile</span><small>移入、聚焦或點選資料點，只顯示該點數值</small></div>
+  <p id="rv-status" role="status">正在載入資料…</p><div id="rv-charts" class="rv-grid"></div>
+  <aside class="rv-note"><h2>如何閱讀</h2><p>Percentile 越高，代表利差相對自身 2 年歷史較寬，或 10s30s 曲線較陡；不直接代表買進評級。10s30s 為 30Y 與 10Y 利差之差。已選指標在各產業內依圖例順序並排，使用同一 bp 刻度；下方 percentile 共用 0–100% 刻度。</p><p>移到資料點才顯示該點數值（最多 6 位小數，排除浮點尾差）。缺值不補零。投影片標示備援以約數呈現。</p><a href="../index.html">返回券商報告知識庫</a></aside>
+  <noscript>請啟用 JavaScript 以操作互動圖表。</noscript>
+</main><div id="rv-tooltip" role="tooltip" hidden></div><script src="../assets/rv.js" defer></script>'''
+    page = page_shell(config, 'RV 相對價值', 'IG 相對價值：2Y 歷史區間、目前值與 percentile。', body, prefix='../', canonical_path='rv/')
+    page = page.replace('內容來源：已整理之券商研究摘要', '內容來源：RV Excel 快照／已核對投影片')
+    (output/'rv').mkdir()
+    (output/'rv/index.html').write_text(page, encoding='utf-8')
 
 
 def build(config: dict) -> tuple[Path, dict]:
@@ -795,6 +819,7 @@ def build(config: dict) -> tuple[Path, dict]:
         build_home(config, reports, weekly, calls, temporary)
         build_secondary_pages(config, reports, weekly, tracker, temporary)
         build_search_index(reports, weekly, tracker, temporary)
+        build_rv(config, temporary)
         validate_public(temporary, len(reports), len(weekly))
         manifest = {
             "schema_version": 1,
@@ -830,7 +855,7 @@ def deploy(manifest: dict) -> None:
     remote = run_git(["remote", "get-url", "origin"], check=False)
     if remote.returncode != 0:
         raise RuntimeError("site 尚未設定 origin remote。")
-    run_git(["add", "public", "assets", "publish.py", "site.config.json", "README.md", "tests", ".github", ".gitignore"])
+    run_git(["add", "public", "assets", "publish.py", "rv_data.py", "scripts", "site.config.json", "README.md", "tests", ".github", ".gitignore"])
     changes = run_git(["diff", "--cached", "--quiet"], check=False)
     if changes.returncode == 0:
         print("網站內容沒有變更，不需發布。")
