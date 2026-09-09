@@ -787,7 +787,7 @@ def build_rv(config: dict, output: Path) -> None:
     body = f'''<link rel="stylesheet" href="../assets/rv.css">
 <main id="main-content" class="rv-shell">
   <div class="rv-heading"><div><p class="rv-kicker">INVESTMENT GRADE / RELATIVE VALUE</p><h1>RV 相對價值</h1></div><p class="rv-date">資料日期 <time datetime="{snapshot['date']}">{snapshot['date'].replace('-', '/')}</time><br><strong>2Y Horizon</strong> · 歷史快照，非即時行情</p></div>
-  <div class="rv-controls"><fieldset><legend>產業分類</legend><div class="rv-options">{controls}</div></fieldset><fieldset><legend>比較指標 <small>可複選</small></legend><div class="rv-options">{metrics}</div></fieldset></div>
+  <div class="rv-controls"><fieldset><legend>產業分類</legend><div class="rv-options">{controls}</div></fieldset><fieldset><legend>比較指標 <small>Spread／10Y／30Y 可複選；10s30s 獨立選取</small></legend><div class="rv-options">{metrics}</div></fieldset></div>
   <div class="rv-guide"><span><i class="range-key"></i>2Y Min–Max</span><span><i class="median-key"></i>中位數</span><span><i class="current-key"></i>目前值</span><span><i class="pct-key"></i>Percentile</span><small>移入、聚焦或點選資料點，只顯示該點數值</small></div>
   <p id="rv-status" role="status">正在載入資料…</p><div id="rv-charts" class="rv-grid"></div>
   <aside class="rv-note"><h2>如何閱讀</h2><p>Percentile 越高，代表利差相對自身 2 年歷史較寬，或 10s30s 曲線較陡；不直接代表買進評級。10s30s 為 30Y 與 10Y 利差之差。已選指標在各產業內依圖例順序並排，使用同一 bp 刻度；下方 percentile 共用 0–100% 刻度。</p><p>移到資料點才顯示該點數值（最多 6 位小數，排除浮點尾差）。缺值不補零。投影片標示備援以約數呈現。</p><a href="../index.html">返回券商報告知識庫</a></aside>

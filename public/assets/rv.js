@@ -80,7 +80,15 @@
     charts.replaceChildren(...(metrics.length?[chart(metrics,section)]:[]));
     status.textContent=metrics.length?`${section} · ${data.sections[section].Spread.length} 個分類項目 · ${metrics.length} 個指標，共用 bp 刻度`:'請選擇至少一個指標';
   }
-  document.querySelector('.rv-controls').addEventListener('change',()=>{if(data)render();});
+  document.querySelector('.rv-controls').addEventListener('change',event=>{
+    const input=event.target;
+    if(input.name==='metric'&&input.checked){
+      for(const other of document.querySelectorAll('[name=metric]')){
+        if(other!==input&&(input.value==='10s30s'||other.value==='10s30s'))other.checked=false;
+      }
+    }
+    if(data)render();
+  });
   document.addEventListener('keydown',e=>{if(e.key==='Escape')hide();});document.addEventListener('click',hide);
   window.addEventListener('resize',()=>{if(data)render();});window.addEventListener('scroll',hide,true);
   fetch('../assets/rv-data.json').then(r=>{if(!r.ok)throw Error();return r.json();}).then(d=>{data=d;render();}).catch(()=>{status.textContent='資料暫時無法載入，請重新整理頁面。';});

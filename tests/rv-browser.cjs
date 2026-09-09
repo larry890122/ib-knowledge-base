@@ -24,15 +24,20 @@ async function run(browser, base, width = 1440) {
     await page.locator(`[name=section][value="${section}"]`).check();
     assert.deepEqual(await page.locator('[name=metric]:checked').evaluateAll(es=>es.map(e=>e.value)),before);
     for(let mask=0;mask<16;mask++) {
+      for(const m of metrics)await page.locator(`[name=metric][value="${m}"]`).setChecked(false);
       for(let i=0;i<4;i++) await page.locator(`[name=metric][value="${metrics[i]}"]`).setChecked(Boolean(mask&(1<<i)));
       assert.equal(await page.locator('.rv-chart').count(),mask ? 1 : 0);
-      assert.equal(await page.locator('.rv-series-legend span').count(),metrics.filter((_,i)=>mask&(1<<i)).length);
+      const expected=mask&8 ? ['10s30s'] : metrics.filter((_,i)=>mask&(1<<i));
+      assert.deepEqual(await page.locator('[name=metric]:checked').evaluateAll(es=>es.map(e=>e.value)),expected);
+      assert.equal(await page.locator('.rv-series-legend span').count(),expected.length);
       if(mask===0) assert.equal(await page.locator('#rv-status').innerText(),'請選擇至少一個指標');
       const overflow = await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);
       assert.equal(overflow,false,`${width}/${section}/${mask} page overflow`);
       combinations++;
     }
     for(const metric of metrics) {
+      await page.locator(`[name=metric][value="${metric}"]`).check();
+      if(metric!=='10s30s')assert.equal(await page.locator('[name=metric][value="10s30s"]').isChecked(),false);
       const points=page.locator(`.rv-point[data-metric="${metric}"]`);
       assert.equal(await points.count(),data.sections[section][metric].length*5);
       for(let i=0;i<await points.count();i++) {
