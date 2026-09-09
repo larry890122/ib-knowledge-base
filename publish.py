@@ -514,6 +514,7 @@ def page_shell(
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23132443'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='sans-serif' font-size='18' fill='white'%3EIB%3C/text%3E%3C/svg%3E">
   <meta name="description" content="{html.escape(description, quote=True)}">
   <title>{html.escape(title)}｜{html.escape(site_title)}</title>
   {canonical_tag}{social}
