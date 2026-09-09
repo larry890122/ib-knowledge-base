@@ -29,6 +29,17 @@
     });
   });
 
+  document.querySelectorAll('[data-call-toggle]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const list = button.closest('[data-call-list]');
+      if (!list) return;
+      const expanded = list.classList.toggle('is-expanded');
+      const count = button.dataset.extraCount || '';
+      button.setAttribute('aria-expanded', String(expanded));
+      button.textContent = expanded ? '收合' : `展開其餘 ${count} 項`;
+    });
+  });
+
   const search = document.querySelector('#report-search');
   const broker = document.querySelector('#broker-filter');
   const asset = document.querySelector('#asset-filter');

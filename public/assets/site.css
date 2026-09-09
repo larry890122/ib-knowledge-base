@@ -154,11 +154,19 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .views-table th:nth-child(8) { width: 16%; }
 .call-status-cell time { display: block; color: var(--muted); white-space: nowrap; }
 .status-pill { display: inline-block; margin-top: .4rem; padding: .18rem .48rem; border-radius: 999px; background: var(--blue-soft); color: var(--blue); font-size: .64rem; font-weight: 850; letter-spacing: .03em; }
-.call-field-details summary { cursor: pointer; color: var(--blue); list-style: none; font-weight: 750; }
-.call-field-details summary::-webkit-details-marker { display: none; }
-.call-field-details summary::after { content: " 展開"; font-size: .68rem; white-space: nowrap; }
-.call-field-details[open] summary::after { content: " 收合"; }
-.call-field-full { margin-top: .45rem; color: var(--ink); }
+.call-list { display: grid; gap: .38rem; }
+.call a { display: block; padding: .28rem .35rem; margin: 0 -.35rem; border-radius: 7px; color: var(--blue); text-decoration: none; }
+.call a:hover { background: var(--blue-soft); }
+.call a:focus-visible { background: var(--blue-soft); }
+.call-value { font-weight: 800; }
+.call-target { color: var(--muted); }
+.call-status { display: inline-flex; margin-left: .35rem; padding: .08rem .35rem; border-radius: 999px; font-size: .65rem; font-weight: 850; white-space: nowrap; }
+.call-status-latest { color: #17603a; background: #dff3e7; }
+.call-status-carried { color: #7a5713; background: #fff0c7; }
+.call.is-extra { display: none; }
+.call-list.is-expanded .call.is-extra { display: block; }
+.call-toggle { justify-self: start; padding: .22rem 0; border: 0; background: transparent; color: var(--blue); font: inherit; font-weight: 800; cursor: pointer; }
+.call-toggle:hover { text-decoration: underline; }
 
 .filters { display: grid; grid-template-columns: minmax(220px, 2fr) repeat(4, minmax(130px, 1fr)) auto; gap: 10px; align-items: end; padding: 18px; margin-bottom: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; }
 .field label { display: block; margin: 0 0 6px; color: var(--muted); font-size: .73rem; font-weight: 800; }

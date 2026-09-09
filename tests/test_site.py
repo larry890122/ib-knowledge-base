@@ -59,9 +59,39 @@ class GeneratedSiteTests(unittest.TestCase):
         self.assertIn('class="intro-hero"', self.home)
         self.assertIn('class="weekly-full-detail"', self.home)
         self.assertNotIn('<details class="weekly-full-detail" open', self.home)
-        self.assertIn('class="call-field-details"', self.home)
-        self.assertNotIn('class="call-list"', self.home)
+        self.assertIn('class="call-list"', self.home)
+        self.assertIn("data-call-link", self.home)
+        self.assertIn("data-call-toggle", self.home)
         self.assertNotIn('class="call-grid"', self.home)
+
+    def test_homepage_calls_link_to_source_reports(self) -> None:
+        links = re.findall(r'<a data-call-link href="([^"]+)"', self.home)
+        self.assertGreater(len(links), 20)
+        for link in links:
+            self.assertRegex(link, r"^reports/[a-z0-9-]+/index\.html$")
+            self.assertTrue((PUBLIC_DIR / unquote(link)).is_file(), link)
+        self.assertNotIn("source_report", self.home.lower())
+
+        if not (SOURCE_DIR / ".forecast-calls.json").is_file():
+            return
+        reports, _, _, calls = publish.load_content(SOURCE_DIR)
+        slugs = {report["source_report"]: report["slug"] for report in reports}
+        ledger = json.loads((SOURCE_DIR / ".forecast-calls.json").read_text(encoding="utf-8"))
+        active = publish.active_ledger_calls(ledger)
+        expected = {
+            f'reports/{slugs[item["source_report"]]}/index.html'
+            for item in active
+            if item["source_report"] in slugs
+        }
+        rendered = {
+            item["url"]
+            for records in calls.values()
+            for record in records
+            for items in record["CallItems"].values()
+            for item in items
+        }
+        self.assertTrue(rendered)
+        self.assertTrue(rendered.issubset(expected))
 
     def test_report_pages_include_all_topic_bullets(self) -> None:
         if not (SOURCE_DIR / ".forecast-calls.json").is_file():

@@ -268,25 +268,212 @@ def parse_calls(markdown: str) -> dict[str, list[dict[str, str]]]:
     return groups
 
 
-def call_table_row(record: dict[str, str]) -> str:
-    def render_cell(value: str) -> str:
-        if len(plain_text(value)) > 76:
-            preview = plain_text(value)[:68].rstrip("、；， ") + "…"
-            return (
-                f'<details class="call-field-details"><summary>{html.escape(preview)}</summary>'
-                f'<div class="call-field-full">{render_inline(value)}</div></details>'
+CALL_FIELDS = (
+    ("Spread", "Spread"),
+    ("Gross Supply", "Gross Supply"),
+    ("Overweight Sector", "Overweight Sector"),
+    ("Underweight Sector", "Underweight Sector"),
+    ("Hyperscaler issuance", "Hyperscaler Issuance"),
+)
+
+
+def normalize_call_text(value: str) -> str:
+    return re.sub(
+        r"\s+",
+        "",
+        value.replace("–", "-").replace("—", "-").replace("−", "-").lower(),
+    )
+
+
+def split_outside_parentheses(value: str, separator: str) -> list[str]:
+    parts: list[str] = []
+    current: list[str] = []
+    depth = 0
+    for character in value:
+        if character in "（(":
+            depth += 1
+        elif character in "）)" and depth:
+            depth -= 1
+        if character == separator and depth == 0:
+            part = "".join(current).strip()
+            if part:
+                parts.append(part)
+            current = []
+        else:
+            current.append(character)
+    part = "".join(current).strip()
+    if part:
+        parts.append(part)
+    return parts
+
+
+def tracker_call_tokens(value: str, call_type: str) -> list[dict[str, str]]:
+    if value.strip() in {"", "—"}:
+        return []
+    group_carried = re.search(r"均\s+Carried，\s*自\s*(\d{4}-\d{2}-\d{2})", value)
+    cleaned = re.sub(r"[（(]均\s+Carried.*[）)]\s*$", "", value).strip()
+    separator = "、" if call_type in {"Overweight Sector", "Underweight Sector"} else "；"
+    tokens = []
+    for segment in split_outside_parentheses(cleaned, separator):
+        call = re.split(r"[（(]", segment, maxsplit=1)[0].strip()
+        if not call:
+            continue
+        carried = re.search(r"Carried，\s*自\s*(\d{4}-\d{2}-\d{2})", segment)
+        tokens.append(
+            {
+                "call": call,
+                "segment": segment,
+                "carried_from": (carried or group_carried).group(1) if (carried or group_carried) else "",
+            }
+        )
+    return tokens
+
+
+def active_ledger_calls(ledger: dict) -> list[dict[str, str]]:
+    latest_coverage: dict[tuple[str, str], str] = {}
+    for coverage in ledger.get("coverage", []):
+        for asset in coverage.get("assets", []):
+            key = (coverage["broker"], asset)
+            latest_coverage[key] = max(latest_coverage.get(key, ""), coverage["report_date"])
+
+    groups: dict[tuple[str, str, str], list[dict[str, str]]] = {}
+    for record in ledger.get("records", []):
+        key = (record["broker"], record["asset"], record["series"])
+        groups.setdefault(key, []).append(record)
+
+    active: list[dict[str, str]] = []
+    for (broker, asset, _series), records in groups.items():
+        active_date = max(record["report_date"] for record in records)
+        coverage_date = latest_coverage.get((broker, asset), active_date)
+        for record in records:
+            if record["report_date"] != active_date:
+                continue
+            active.append(
+                {
+                    **record,
+                    "status": "Carried" if active_date < coverage_date else "Latest",
+                }
             )
-        return render_inline(value)
+    return active
+
+
+def attach_call_links(
+    calls: dict[str, list[dict[str, str]]],
+    ledger: dict,
+    report_by_source: dict[str, dict],
+) -> None:
+    active = active_ledger_calls(ledger)
+    for asset, records in calls.items():
+        for record in records:
+            broker = record.get("券商", "")
+            linked_fields: dict[str, list[dict[str, str]]] = {}
+            for tracker_field, ledger_type in CALL_FIELDS:
+                tokens = tracker_call_tokens(record.get(tracker_field, "—"), ledger_type)
+                items: list[dict[str, str]] = []
+                for token in tokens:
+                    token_call = normalize_call_text(token["call"])
+                    candidates = [
+                        item
+                        for item in active
+                        if item["broker"] == broker
+                        and item["asset"] == asset
+                        and item["type"] == ledger_type
+                        and normalize_call_text(item["call"]) == token_call
+                    ]
+                    # Tracker may prefix a compact series label (for example
+                    # "BBB-A") to the ledger call. Keep exact matching first,
+                    # then allow the ledger call to appear as a complete suffix.
+                    if not candidates:
+                        candidates = [
+                            item
+                            for item in active
+                            if item["broker"] == broker
+                            and item["asset"] == asset
+                            and item["type"] == ledger_type
+                            and token_call.endswith(normalize_call_text(item["call"]))
+                        ]
+                    if token["carried_from"]:
+                        candidates = [
+                            item for item in candidates if item["report_date"] == token["carried_from"]
+                        ]
+                    if len(candidates) > 1:
+                        segment = normalize_call_text(token["segment"])
+                        target_matches = [
+                            item
+                            for item in candidates
+                            if item.get("target_date")
+                            and normalize_call_text(item["target_date"]) in segment
+                        ]
+                        if target_matches:
+                            candidates = target_matches
+                    if len(candidates) != 1:
+                        raise ValueError(
+                            "Call來源無法唯一對應："
+                            f"{broker} | {asset} | {ledger_type} | {token['segment']} "
+                            f"(matches={len(candidates)})"
+                        )
+                    source = candidates[0]
+                    report = report_by_source.get(source["source_report"])
+                    if report is None:
+                        raise ValueError(
+                            "Call來源沒有公開報告頁："
+                            f"{broker} | {asset} | {source['source_report']}"
+                        )
+                    items.append(
+                        {
+                            # Keep the Tracker's user-facing qualifier (for
+                            # example "BBB-A") while sourcing the URL and
+                            # metadata from the matched ledger record.
+                            "call": token["call"],
+                            "target_date": source.get("target_date", ""),
+                            "status": source["status"],
+                            "note": source.get("note", ""),
+                            "url": f"reports/{report['slug']}/index.html",
+                        }
+                    )
+                linked_fields[tracker_field] = items
+            record["CallItems"] = linked_fields
+
+
+def render_call_list(items: list[dict[str, str]]) -> str:
+    if not items:
+        return '<span class="muted">—</span>'
+    rendered = []
+    for index, item in enumerate(items):
+        target = (
+            f'<span class="call-target">／{html.escape(item["target_date"])}</span>'
+            if item["target_date"]
+            else ""
+        )
+        status_label = "延續" if item["status"] == "Carried" else "最新"
+        extra = " is-extra" if index >= 2 else ""
+        title = f' title="{html.escape(item["note"], quote=True)}"' if item["note"] else ""
+        rendered.append(
+            f'<div class="call{extra}"><a data-call-link href="{html.escape(item["url"], quote=True)}"{title}>'
+            f'<span class="call-value">{html.escape(item["call"])}</span>{target}'
+            f'<span class="call-status call-status-{item["status"].lower()}">{status_label}</span></a></div>'
+        )
+    if len(items) > 2:
+        extra_count = len(items) - 2
+        rendered.append(
+            f'<button class="call-toggle" type="button" data-call-toggle data-extra-count="{extra_count}" '
+            f'aria-expanded="false">展開其餘 {extra_count} 項</button>'
+        )
+    return f'<div class="call-list" data-call-list>{"".join(rendered)}</div>'
+
+
+def call_table_row(record: dict[str, str]) -> str:
+    linked_fields = record["CallItems"]
 
     values = (
-        record.get("Spread", "—"),
-        record.get("Gross Supply", "—"),
-        record.get("Overweight Sector", "—"),
-        record.get("Underweight Sector", "—"),
-        record.get("Hyperscaler issuance", "—"),
-        record.get("最新／延續說明", "—"),
+        render_call_list(linked_fields["Spread"]),
+        render_call_list(linked_fields["Gross Supply"]),
+        render_call_list(linked_fields["Overweight Sector"]),
+        render_call_list(linked_fields["Underweight Sector"]),
+        render_call_list(linked_fields["Hyperscaler issuance"]),
+        render_inline(record.get("最新／延續說明", "—")),
     )
-    cells = "".join(f"<td>{render_cell(value)}</td>" for value in values)
+    cells = "".join(f"<td>{value}</td>" for value in values)
     return f"""
       <tr>
         <th scope="row">{html.escape(record.get('券商', ''))}</th>
@@ -385,6 +572,7 @@ def load_content(source_root: Path) -> tuple[list[dict], list[dict], str, dict[s
                 "summary_text": plain_text(summary),
                 "topics": topics,
                 "slug": slug,
+                "source_report": relative,
             }
         )
     reports.sort(key=lambda item: (item["date"], item["broker"], item["title"]), reverse=True)
@@ -411,6 +599,7 @@ def load_content(source_root: Path) -> tuple[list[dict], list[dict], str, dict[s
         if ".xlsx" not in line.lower()
     ).strip()
     calls = parse_calls(tracker_markdown)
+    attach_call_links(calls, ledger, {item["source_report"]: item for item in reports})
     return reports, weekly, tracker_markdown, calls
 
 
