@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "site_id": "ib-knowledge-base",
+  "production_url": "https://larry890122.github.io/ib-knowledge-base/",
+  "commit_sha": "PENDING_CI",
+  "built_at": "2026-09-11T13:55:47+08:00",
+  "content_as_of": "2026-09-04",
+  "validation_status": "PASS",
+  "content_sha256": "6cf4b3a60494d492fb5fa6564ff6be540beae9cd298141e623eb18a08d3af953",
+  "peer": {
+    "site_id": "rv-dashboard",
+    "manifest_url": "https://larry890122.github.io/rv-dashboard/integration-manifest.json"
+  }
+}

@@ -7,6 +7,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -15,11 +16,11 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote
-from rv_data import validate as validate_rv
 
 
 SITE_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = SITE_DIR / "site.config.json"
+RV_URL = "https://larry890122.github.io/rv-dashboard/"
 FORBIDDEN_PUBLIC_TERMS = (
     "source.txt",
     "source_file",
@@ -529,7 +530,7 @@ def page_shell(
         <a href="{prefix}index.html#weekly">Weekly Summary</a>
         <a href="{prefix}index.html#calls">券商觀點</a>
         <a href="{prefix}index.html#reports">報告知識庫</a>
-        <a href="{prefix}rv/">RV 相對價值</a>
+        <a href="{RV_URL}">RV 相對價值</a>
       </nav>
     </div>
   </header>
@@ -748,14 +749,14 @@ def build_search_index(reports: list[dict], weekly: list[dict], tracker: str, ou
 def hash_public(output: Path) -> str:
     digest = hashlib.sha256()
     for path in sorted(output.rglob("*")):
-        if path.is_file() and path.name != "site-manifest.json":
+        if path.is_file() and path.name not in {"site-manifest.json", "integration-manifest.json"}:
             digest.update(path.relative_to(output).as_posix().encode("utf-8"))
             digest.update(path.read_bytes())
     return digest.hexdigest()
 
 
 def validate_public(output: Path, expected_reports: int, expected_weekly: int) -> None:
-    required = [output / "index.html", output / "forecast" / "index.html", output / "weekly" / "index.html", output / "search-index.json", output / "rv/index.html", output / "assets/rv-data.json", output / "assets/rv.css", output / "assets/rv.js"]
+    required = [output / "index.html", output / "forecast" / "index.html", output / "weekly" / "index.html", output / "search-index.json", output / "rv/index.html", output / "integration-manifest.json"]
     for path in required:
         if not path.is_file():
             raise ValueError(f"缺少網站輸出：{path.relative_to(output)}")
@@ -769,6 +770,9 @@ def validate_public(output: Path, expected_reports: int, expected_weekly: int) -
     order = [home.find('id="weekly"'), home.find('id="calls"'), home.find('id="reports"')]
     if min(order) < 0 or order != sorted(order):
         raise ValueError("首頁區塊順序不是 Weekly、Calls、Reports")
+    redirect = (output / "rv" / "index.html").read_text(encoding="utf-8")
+    if RV_URL not in redirect:
+        raise ValueError("舊 RV 路徑未正確轉址到獨立網站")
     for path in output.rglob("*"):
         if path.is_file() and path.suffix.lower() in {".html", ".json", ".js", ".css", ".txt"}:
             lower = path.read_text(encoding="utf-8").lower()
@@ -777,26 +781,33 @@ def validate_public(output: Path, expected_reports: int, expected_weekly: int) -
                     raise ValueError(f"公開輸出含禁止資訊 {term!r}：{path.relative_to(output)}")
 
 
-def build_rv(config: dict, output: Path) -> None:
-    snapshot = json.loads((SITE_DIR / 'assets/rv-data.json').read_text(encoding='utf-8'))
-    validate_rv(snapshot)
-    for name in ('rv.css', 'rv.js', 'rv-data.json'):
-        shutil.copy2(SITE_DIR / 'assets' / name, output / 'assets' / name)
-    controls = ''.join(f'<label><input type="radio" name="section" value="{s}" {"checked" if s == "Overview" else ""}><span>{s}</span></label>' for s in snapshot['sections'])
-    metrics = ''.join(f'<label><input type="checkbox" name="metric" value="{m}" {"checked" if m == "Spread" else ""}><span>{m}</span></label>' for m in ('Spread','10Y','30Y','10s30s'))
-    body = f'''<link rel="stylesheet" href="../assets/rv.css">
-<main id="main-content" class="rv-shell">
-  <div class="rv-heading"><div><p class="rv-kicker">INVESTMENT GRADE / RELATIVE VALUE</p><h1>RV 相對價值</h1></div><p class="rv-date">資料日期 <time datetime="{snapshot['date']}">{snapshot['date'].replace('-', '/')}</time><br><strong>2Y Horizon</strong> · 歷史快照，非即時行情</p></div>
-  <div class="rv-controls"><fieldset><legend>產業分類</legend><div class="rv-options">{controls}</div></fieldset><fieldset><legend>比較指標 <small>Spread／10Y／30Y 可複選；10s30s 獨立選取</small></legend><div class="rv-options">{metrics}</div></fieldset></div>
-  <div class="rv-guide"><span><i class="range-key"></i>2Y Min–Max</span><span><i class="median-key"></i>中位數</span><span><i class="current-key"></i>目前值</span><span><i class="pct-key"></i>Percentile</span><small>移入、聚焦或點選資料點，只顯示該點數值</small></div>
-  <p id="rv-status" role="status">正在載入資料…</p><div id="rv-charts" class="rv-grid"></div>
-  <aside class="rv-note"><h2>如何閱讀</h2><p>Percentile 越高，代表利差相對自身 2 年歷史較寬，或 10s30s 曲線較陡；不直接代表買進評級。10s30s 為 30Y 與 10Y 利差之差。已選指標在各產業內依圖例順序並排，使用同一 bp 刻度；下方 percentile 共用 0–100% 刻度。</p><p>移到資料點才顯示該點數值（最多 6 位小數，排除浮點尾差）。缺值不補零。投影片標示備援以約數呈現。</p><a href="../index.html">返回券商報告知識庫</a></aside>
-  <noscript>請啟用 JavaScript 以操作互動圖表。</noscript>
-</main><div id="rv-tooltip" role="tooltip" hidden></div><script src="../assets/rv.js" defer></script>'''
-    page = page_shell(config, 'RV 相對價值', 'IG 相對價值：2Y 歷史區間、目前值與 percentile。', body, prefix='../', canonical_path='rv/')
-    page = page.replace('內容來源：已整理之券商研究摘要', '內容來源：RV Excel 快照／已核對投影片')
-    (output/'rv').mkdir()
-    (output/'rv/index.html').write_text(page, encoding='utf-8')
+def build_rv_redirect(output: Path) -> None:
+    target = html.escape(RV_URL, quote=True)
+    page = f'''<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="0; url={target}"><link rel="canonical" href="{target}">
+<title>RV 相對價值已搬遷</title></head><body><main><h1>RV 相對價值已搬遷</h1>
+<p><a href="{target}">前往獨立 RV 網站</a></p></main></body></html>'''
+    (output / "rv").mkdir()
+    (output / "rv" / "index.html").write_text(page + "\n", encoding="utf-8")
+
+
+def integration_manifest(config: dict, weekly: list[dict], reports: list[dict], output: Path) -> dict:
+    dates = [item["date"] for item in weekly] + [item["date"] for item in reports]
+    return {
+        "schema_version": 1,
+        "site_id": "ib-knowledge-base",
+        "production_url": config["BaseUrl"],
+        "commit_sha": os.environ.get("GITHUB_SHA", "PENDING_CI"),
+        "built_at": datetime.now().astimezone().isoformat(timespec="seconds"),
+        "content_as_of": max(dates),
+        "validation_status": "PASS",
+        "content_sha256": hash_public(output),
+        "peer": {
+            "site_id": "rv-dashboard",
+            "manifest_url": "https://larry890122.github.io/rv-dashboard/integration-manifest.json",
+        },
+    }
 
 
 def build(config: dict) -> tuple[Path, dict]:
@@ -820,7 +831,11 @@ def build(config: dict) -> tuple[Path, dict]:
         build_home(config, reports, weekly, calls, temporary)
         build_secondary_pages(config, reports, weekly, tracker, temporary)
         build_search_index(reports, weekly, tracker, temporary)
-        build_rv(config, temporary)
+        build_rv_redirect(temporary)
+        peer_manifest = integration_manifest(config, weekly, reports, temporary)
+        (temporary / "integration-manifest.json").write_text(
+            json.dumps(peer_manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        )
         validate_public(temporary, len(reports), len(weekly))
         manifest = {
             "schema_version": 1,
@@ -856,17 +871,20 @@ def deploy(manifest: dict) -> None:
     remote = run_git(["remote", "get-url", "origin"], check=False)
     if remote.returncode != 0:
         raise RuntimeError("site 尚未設定 origin remote。")
-    run_git(["add", "public", "assets", "publish.py", "rv_data.py", "scripts", "site.config.json", "README.md", "tests", ".github", ".gitignore"])
+    branch = run_git(["branch", "--show-current"], check=False).stdout.strip()
+    if not branch or branch in {"main", "master"}:
+        raise RuntimeError("禁止直接從 main/master 發布；請先建立 codex/<task> branch，推送後以 PR 合併。")
+    run_git(["add", "public", "assets", "publish.py", "peer_status.py", "SITE_OPERATIONS.md", "site.config.json", "README.md", "tests", ".github", ".gitignore"])
     changes = run_git(["diff", "--cached", "--quiet"], check=False)
     if changes.returncode == 0:
         print("網站內容沒有變更，不需發布。")
         return
-    message = f"Publish knowledge base {manifest['built_at']}"
+    message = f"Prepare knowledge base release {manifest['built_at']}"
     run_git(["commit", "-m", message])
     pushed = run_git(["push", "origin", "HEAD"], check=False)
     if pushed.returncode != 0:
         raise RuntimeError("GitHub push 失敗；請確認登入或 token 後再試。\n" + pushed.stderr.strip())
-    print("已推送至 GitHub，GitHub Pages 將開始部署。")
+    print(f"已推送 branch {branch}；請建立 PR，測試通過並合併 main 後才會部署。")
 
 
 def write_log(message: str) -> None:
@@ -882,8 +900,19 @@ def main() -> int:
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--build-only", action="store_true", help="只建置公開網站")
     mode.add_argument("--deploy", action="store_true", help="建置後 commit 並推送 GitHub")
+    mode.add_argument("--stamp-integration", action="store_true", help="CI 將實際 commit SHA 寫入公開 manifest")
     args = parser.parse_args()
     try:
+        if args.stamp_integration:
+            sha = os.environ.get("GITHUB_SHA", "").strip()
+            if not sha:
+                raise ValueError("--stamp-integration 只能在含 GITHUB_SHA 的 CI 執行")
+            path = SITE_DIR / "public" / "integration-manifest.json"
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            manifest["commit_sha"] = sha
+            path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print(f"integration manifest stamped: {sha}")
+            return 0
         config = load_config()
         output, manifest = build(config)
         write_log(f"BUILD PASS reports={manifest['report_count']} weekly={manifest['weekly_count']} sha256={manifest['content_sha256']}")
