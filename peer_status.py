@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import subprocess
 import sys
 import urllib.error
 import urllib.request
@@ -30,13 +31,29 @@ def validate_peer(data: dict) -> None:
         raise ValueError(f"peer validation_status={data['validation_status']!r}")
 
 
+def fetch_manifest(url: str) -> dict:
+    try:
+        with urllib.request.urlopen(url, timeout=15) as response:
+            return json.load(response)
+    except urllib.error.URLError as urllib_exc:
+        try:
+            result = subprocess.run(
+                ["/usr/bin/curl", "--fail", "--silent", "--show-error", "--location", "--max-time", "15", url],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+            return json.loads(result.stdout)
+        except (FileNotFoundError, subprocess.CalledProcessError, json.JSONDecodeError):
+            raise urllib_exc
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--require-reachable", action="store_true")
     args = parser.parse_args()
     try:
-        with urllib.request.urlopen(PEER_MANIFEST_URL, timeout=15) as response:
-            data = json.load(response)
+        data = fetch_manifest(PEER_MANIFEST_URL)
     except (OSError, urllib.error.URLError, json.JSONDecodeError) as exc:
         print(f"PEER WARNING: {PEER_SITE_ID} is unreachable: {exc}", file=sys.stderr)
         return 1 if args.require_reachable else 0
