@@ -31,6 +31,7 @@ class GeneratedSiteTests(unittest.TestCase):
     def setUpClass(cls) -> None:
         cls.home = (PUBLIC_DIR / "index.html").read_text(encoding="utf-8")
         cls.manifest = json.loads((PUBLIC_DIR / "site-manifest.json").read_text(encoding="utf-8"))
+        cls.integration = json.loads((PUBLIC_DIR / "integration-manifest.json").read_text(encoding="utf-8"))
         cls.search = json.loads((PUBLIC_DIR / "search-index.json").read_text(encoding="utf-8"))
 
     def test_manifest_is_valid(self) -> None:
@@ -39,6 +40,17 @@ class GeneratedSiteTests(unittest.TestCase):
         self.assertGreaterEqual(self.manifest["report_count"], 54)
         self.assertGreaterEqual(self.manifest["weekly_count"], 5)
         self.assertTrue(self.manifest["forecast_included"])
+        self.assertEqual(self.integration["schema_version"], 1)
+        self.assertEqual(self.integration["site_id"], "ib-knowledge-base")
+        self.assertEqual(self.integration["validation_status"], "PASS")
+        self.assertEqual(self.integration["peer"]["site_id"], "rv-dashboard")
+
+    def test_rv_is_external_and_legacy_path_redirects(self) -> None:
+        self.assertIn('href="https://larry890122.github.io/rv-dashboard/">RV 相對價值</a>', self.home)
+        redirect = (PUBLIC_DIR / "rv" / "index.html").read_text(encoding="utf-8")
+        self.assertIn('http-equiv="refresh"', redirect)
+        self.assertIn("https://larry890122.github.io/rv-dashboard/", redirect)
+        self.assertFalse((PUBLIC_DIR / "assets" / "rv-data.json").exists())
 
     def test_homepage_section_order(self) -> None:
         positions = [
