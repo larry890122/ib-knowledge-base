@@ -26,6 +26,17 @@ FORBIDDEN = (
 )
 
 
+class MarkdownRenderingTests(unittest.TestCase):
+    def test_ordered_list_continues_across_blank_lines(self) -> None:
+        rendered = publish.render_markdown(
+            "1. **第一項：** 內容。\n\n"
+            "2. **第二項：** 內容。\n\n"
+            "3. **第三項：** 內容。"
+        )
+        self.assertEqual(rendered.count("<ol>"), 1)
+        self.assertEqual(rendered.count("<li>"), 3)
+
+
 class GeneratedSiteTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:

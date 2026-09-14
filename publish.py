@@ -153,12 +153,29 @@ def render_markdown(markdown: str) -> str:
             output.append(f"</{list_type}>")
             list_type = None
 
+    def next_list_type(start: int) -> str | None:
+        """Return the next list kind, ignoring Markdown's visual spacing."""
+        for candidate in lines[start:]:
+            candidate = candidate.strip()
+            if not candidate:
+                continue
+            if re.match(r"^[-*]\s+", candidate):
+                return "ul"
+            if re.match(r"^\d+\.\s+", candidate):
+                return "ol"
+            return None
+        return None
+
     while index < len(lines):
         line = lines[index]
         stripped = line.strip()
         if not stripped:
             flush_paragraph()
-            close_list()
+            # Weekly Markdown intentionally separates items with blank lines
+            # for readability. Keep the HTML list open when the next content
+            # is another item of the same kind so ordered numbers continue.
+            if list_type and next_list_type(index + 1) != list_type:
+                close_list()
             index += 1
             continue
         if index + 1 < len(lines) and stripped.startswith("|") and is_table_separator(lines[index + 1]):
