@@ -169,12 +169,12 @@ class GeneratedSiteTests(unittest.TestCase):
             for term in FORBIDDEN:
                 self.assertNotIn(term, content, f"{term!r} leaked in {path.relative_to(PUBLIC_DIR)}")
 
-    def test_tracker_rewords_internal_source_storage_note(self) -> None:
+    def test_tracker_hides_internal_source_storage_terms(self) -> None:
         forecast = (PUBLIC_DIR / "forecast" / "index.html").read_text(
             encoding="utf-8"
         )
         self.assertNotRegex(forecast.lower(), r"to\s*text")
-        self.assertIn("舊sector與hyperscaler calls來源缺失", forecast)
+        self.assertIn("有 EUR HY coverage，無有效 house call。", forecast)
 
     def test_social_metadata_is_scoped(self) -> None:
         self.assertIn("https://larry890122.github.io/ib-knowledge-base/og.png", self.home)
